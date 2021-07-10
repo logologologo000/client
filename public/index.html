@@ -10,35 +10,121 @@
       content="Web site created using create-react-app"
     />
     <link rel="apple-touch-icon" href="%PUBLIC_URL%/logo192.png" />
+  
+      <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
+  
     
-    <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <title>React App</title>
     <style>
-      .col-md {
-        border: 1px solid;
-      }
+     #list:hover {
+    background-color: #198754;
+  }
+  
+  body {
+   background-image: linear-gradient(180deg, rgba(25, 135, 84, 1) 0%, rgba(92, 170, 134, 1) 33%, rgba(140, 195, 170, 1) 55%, rgba(188, 220, 206, 1) 78%, rgba(255, 255, 255, 1) 100%);
+   height : 1200px;
+  }
+
+  #formm {
+    opacity: 0.9;
+    border-radius: 20px;
+    
+  }
+  h3 {
+   color: #198754;
+   line-height: 1.7;
+   letter-spacing: 7px;
+   word-spacing: 5px;
+   text-align: center;
+   text-decoration: none;
+   text-transform: uppercase;
+  }
+  label {
+   color: #198754;
+   line-height: 1.65;
+   letter-spacing: 10px;
+   word-spacing: 4px;
+   text-align: left;
+   
+   text-transform: lowercase;
+  }
+  span {
+   line-height: 1.65;
+   letter-spacing: 10px;
+   word-spacing: 4px;
+   text-align: left;
+  }
+  .boxgreen {
+   border-color: #198754;
+   border-radius: 40px;
+  }
+  .buttonsub {
+   text-align: center;
+   
+   text-transform: uppercase;
+  }
+
+  .linker {
+   color: #198754;
+   
+   letter-spacing: 5px;
+   
+   text-align: center;
+   text-decoration: none;
+   text-transform: uppercase;
+   font-size:  11px;
+ }
+ .linker:hover {
+   color: #198754;
+   
+ }
+
+     
     </style>
 
   </head>
 
   <body>
     
-    <div class="container ">
-      <div class="row align-items-end">
-        <div class="col-md ">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi sequi exercitationem expedita ad! Debitis fugiat facere quos ipsum illo perferendis distinctio vitae voluptatum incidunt soluta id, hic ullam excepturi vel ipsam rerum et aspernatur. Autem magnam debitis voluptate quo sequi ducimus, perspiciatis quam praesentium tempore 
-          </div>
-          <div class="col-md">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi sequi exercitationem expedita ad! Debitis fugiat facere quos ipsum illo perferendis distinctio vitae voluptatum incidunt soluta id, hic ullam excepturi vel ipsam rerum et aspernatur. Autem magnam debitis voluptate quo sequi ducimus, perspiciatis quam praesentium tempore commodi, exercitationem veritatis officia molestias consequatur? Ad 
-          </div>
-          <div class="col-md">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi sequi exercitationem expedita ad! Debitis fugiat facere quos ipsum illo perferendis distinctio vitae voluptatum incidunt soluta id, hic ullam excepturi vel ipsam rerum et aspernatur. Autem magnam debitis voluptate quo sequi ducimus, perspiciatis quam praesentium tempore commodi, exercitationem veritatis officia molestias consequatur? Ad 
-          </div>
-      </div>
-    </div>
+    <div class="container my-5 p-2 "  >
+      <div class="row">
+          
+          <div class="col col-7 col-md-5  m-auto ">
+          
+              <form action="" class="form-control p-5" id="formm">
+                  <h3 class="">LOGIN</h3>
+      
 
-    <div id="root"></div>
+
+                  <div class="my-3" >
+                  <label for="" >username  </label>
+                  <input class="form-control boxgreen"  type="text" name="username" />
+                  </div>
+                  <div class="" >
+                  <label for="" >password  </label>
+                  <input class="form-control boxgreen" type="text" name="password" />
+                  </div>
+                  <div  class="mt-4 mx-auto buttonsub" >
+                  <button class="btn btn-outline-success  " style="border-radius: 40px;"><span>submit</span></button>
+                  </div>
+                  <div  class="mt-1 mx-auto buttonsub " >
+                  <a href="#" class="linker">register</a>
+                  </div>
+                  
+                  
+                  
+              </form> 
+          </div>
+
+      </div>
+
+
+
+  </div>
+
+    <div id="root"></div> 
+    
     <script src="js/bootstrap.bundle.min.js"></script>
   </body>
 </html>
