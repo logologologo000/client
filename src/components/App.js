@@ -3,13 +3,16 @@ import Navbar from './layouts/navbar.js'
 import Signin from './Signin.js'
 import Admin from './Admin.js'
 import Register from './Register.js'
+import AdminRegister from './AdminRegister.js'
 
 
 function App() {
   return (
 
           <div>
-              <Register />
+              <Navbar />
+
+              <Admin />
           </div>
 
   );

@@ -1,7 +1,7 @@
 import React from 'react'
 import './css/Register.css'
 
-function Register() {
+function AdminRegister() {
   return (
     <div>
       <div className="container my-5 p-2">
@@ -9,7 +9,7 @@ function Register() {
 
           <div className=" col-lg-7 col-md-9 m-auto">
             <form action="#" className="form-control p-5" id="formm ">
-              <h3 className="">Student REgistration</h3>
+              <h3 className="">Admin REgistration</h3>
               <div className="row">
                 {
                   //left side form
@@ -35,10 +35,7 @@ function Register() {
                     <label className="mx-3" htmlFor="email">E-mail </label>
                     <input className="form-control boxgreen" type="email" name="email" />
                   </div>
-                  <div className="mt-3">
-                    <label className="mx-3" htmlFor="studentcode">student-code </label>
-                    <input className="form-control boxgreen" type="email" name="email" />
-                  </div>
+                  
                 </div>
                 {
                   //right side form
@@ -60,16 +57,7 @@ function Register() {
                       name="lastname"
                     />
                   </div>
-                  <div className="mt-3">
-                    <label className="mx-3" htmlFor="lastname">subject</label>
-
-                    <select className="form-select boxgreen" aria-label="Default select example">
-                      <option defaultValue>Open this select menu</option>
-                      <option value="1">COM 1404 sec 2</option>
-                      <option value="2">COM 2540 sec 1</option>
-                      <option value="3">COM 3303 sec 11</option>
-                    </select>
-                  </div>
+                  
                 </div>
               </div>
 
@@ -84,10 +72,7 @@ function Register() {
                   <span>submit</span>
                 </button>
               </div>
-              <div className="mt-1 mx-auto buttonsub">
-                <a href="#" className="linker">Admin</a>
-              </div>
-
+              
             </form>
           </div>
         </div>
@@ -96,4 +81,4 @@ function Register() {
   )
 }
 
-export default Register
+export default AdminRegister
