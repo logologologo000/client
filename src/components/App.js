@@ -10,9 +10,9 @@ function App() {
   return (
 
           <div>
-              <Navbar />
-
               <Admin />
+
+              
           </div>
 
   );

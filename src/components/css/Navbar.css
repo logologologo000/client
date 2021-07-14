@@ -1,3 +1,13 @@
 .navcenter {
     margin-left:45%
 }
+
+.navbar {
+    opacity: 85%;
+    border-radius: 15px;
+  }
+
+  .navbar-toggler:hover, .navbar-toggler:focus{
+    -webkit-box-shadow: none;
+
+    }
