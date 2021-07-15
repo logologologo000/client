@@ -8,17 +8,18 @@
 }
 ::-webkit-scrollbar {
     width: 5px;
+    
 }
 ::-webkit-scrollbar-track {
     display : none;
 
 }
 ::-webkit-scrollbar-thumb {
-    background-color: rgba(0, 0, 0, 0.2); 
+    background-color: rgb(171, 228, 201); 
     
 }
 ::-webkit-scrollbar-button {
-    max-height: 1vh;
+    max-height: 10%;
 
 }
 ::-webkit-scrollbar-corner {
@@ -97,4 +98,10 @@
 
 #contents:hover {
     opacity: 100%;
+}
+
+.pdd-0 {
+    padding-bottom: 0px;
+    padding-top: 0px;
+
 }

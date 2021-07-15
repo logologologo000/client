@@ -75,14 +75,14 @@ function admin() {
                             {
                                 // rows
                             }
-                            <div className="area card widthcard list-scroll " >
+                            <div className="area card widthcard list-scroll p-3 " >
 
                                 {
                                     //loop here
                                 }
 
-                                <div id="contents">
-                                    <div className="card-body">
+                                
+                                    <div className="card-body pdd-0">
                                         <div>
                                             <h5 className="card-title d-inline">404 Not Found</h5>
                                             <button
@@ -114,10 +114,10 @@ function admin() {
                                         </div>
                                         <hr />
                                     </div>
-                                </div>
+                                
 
                                 <div id="contents">
-                                    <div className="card-body">
+                                    <div className="card-body pdd-0">
                                         <div>
                                             <h5 className="card-title d-inline">404 Not Found</h5>
                                             <button
@@ -152,7 +152,7 @@ function admin() {
                                 </div>
 
                                 <div id="contents">
-                                    <div className="card-body">
+                                    <div className="card-body pdd-0">
                                         <div>
                                             <h5 className="card-title d-inline">404 Not Found</h5>
                                             <button
@@ -187,7 +187,7 @@ function admin() {
                                 </div>
 
                                 <div id="contents">
-                                    <div className="card-body">
+                                    <div className="card-body pdd-0">
                                         <div>
                                             <h5 className="card-title d-inline">404 Not Found</h5>
                                             <button
@@ -222,7 +222,7 @@ function admin() {
                                 </div>
 
                                 <div id="contents">
-                                    <div className="card-body">
+                                    <div className="card-body pdd-0">
                                         <div>
                                             <h5 className="card-title d-inline">404 Not Found</h5>
                                             <button
@@ -257,7 +257,7 @@ function admin() {
                                 </div>
 
                                 <div id="contents">
-                                    <div className="card-body">
+                                    <div className="card-body pdd-0 ">
                                         <div>
                                             <h5 className="card-title d-inline">404 Not Found</h5>
                                             <button
@@ -292,7 +292,7 @@ function admin() {
                                 </div>
 
                                 <div id="contents">
-                                    <div className="card-body">
+                                    <div className="card-body pdd-0">
                                         <div>
                                             <h5 className="card-title d-inline">404 Not Found</h5>
                                             <button

@@ -4,13 +4,15 @@ import Signin from './Signin.js'
 import Admin from './Admin.js'
 import Register from './Register.js'
 import AdminRegister from './AdminRegister.js'
+import User from './Users.js'
 
 
 function App() {
   return (
 
           <div>
-              <Admin />
+            <Navbar />
+              <User />
 
               
           </div>
