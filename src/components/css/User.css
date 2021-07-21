@@ -1,3 +1,7 @@
-.jooj {
-    background-color:aliceblue;
+.border-rg {
+    opacity: 85%;
+    border-radius: 15px;
+    border: 1px solid #198754;
+    border-radius: 15px;
+    
 }
