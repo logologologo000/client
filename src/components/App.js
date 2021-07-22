@@ -12,9 +12,8 @@ function App() {
 
           <div>
             <Navbar />
-              <User />
-
-              
+            <Signin />
+            
           </div>
 
   );

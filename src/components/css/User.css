@@ -5,3 +5,23 @@
     border-radius: 15px;
     
 }
+
+.inll {
+    display: inline;
+}
+
+.bttp {
+    display: inline;
+    margin: auto;
+    width:38px;
+}
+
+.detail-requ {
+    height: auto;
+}
+
+.imgu {
+    width: 300px;
+    height: 300px;
+    border-radius: 15px;
+}

@@ -1,34 +1,44 @@
 import React from 'react'
 import './css/Signin.css'
+import './css/Body.css'
+
 
 function signin() {
     return (
         <div>
 
-            <div className="container my-5 p-2 "  >
+            <div className="container my-5 p-2 " >
                 <div className="row">
 
-                    <div className="col col-7 col-md-5  m-auto ">
+                    <div className="col-8 col-md-6 col-lg-5  m-auto ">
 
-                        <form action="" className="form-control p-5" id="formm">
-                            <h3 className="">LOGIN</h3>
+                        <form action="#" className="p-5" id="formmmm">
+                            <h3 className="color-yellow">SIGN IN</h3>
 
-
+                            <hr />
 
                             <div className="my-3" >
-                                <label for="" >username  </label>
-                                <input className="form-control boxgreen" type="text" name="username" />
+                                <label for="" className="mx-3 color-white" >username  </label>
+                                <input className="form-control input-r" type="text" name="username" />
                             </div>
                             <div className="" >
-                                <label for="" >password  </label>
-                                <input className="form-control boxgreen" type="text" name="password" />
+                                <label for="" className="mx-3 color-white " >password  </label>
+                                <input className="form-control input-r" type="password" name="password" />
                             </div>
-                            <div className="mt-4 mx-auto buttonsub" >
-                                <button className="btn btn-outline-success"><span>submit</span></button>
-                            </div>
-                            <div className="mt-1 mx-auto buttonsub " >
+
+                            <hr />
+                            <center>
+                                <div className="mt-5 center-item" >
+                                    <button className="btn-yellow ">
+                                         <span>LOGIN</span>
+                                    </button>
+                                </div> 
+                              <div className="mt-1" >
                                 <a href="#" className="linker">register</a>
-                            </div>
+                              </div>  
+                            </center>
+                            
+                            
 
 
 

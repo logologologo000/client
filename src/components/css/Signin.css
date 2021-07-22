@@ -1,63 +1,41 @@
-#list:hover {
-    background-color: #198754;
-  }
-
- 
-  
-
-  #formm {
-    opacity: 0.9;
+  #formmmm {
     border-radius: 20px;
+    box-shadow: 4px 4px 4px #FCA311;
+    background-color: #14213D;
+  }
+
+  
+  .form-control , .form-select  {
     
+    background-color: #fff;
+    border: none;
+    -webkit-box-shadow: none;
+    text-transform: lowercase;
+    letter-spacing: 7px;
   }
-  h3 {
-   color: #198754;
-   line-height: 1.7;
-   letter-spacing: 7px;
-   word-spacing: 5px;
-   text-align: center;
-   text-decoration: none;
-   text-transform: uppercase;
-  }
-  label {
-   color: #198754;
-   line-height: 1.65;
-   letter-spacing: 10px;
-   word-spacing: 4px;
-   text-align: left;
-   
-   text-transform: lowercase;
-  }
-  span {
-   line-height: 1.65;
-   letter-spacing: 10px;
-   word-spacing: 4px;
-   text-align: left;
-  }
-  .boxgreen {
-   border-color: #198754;
-   border-radius: 40px;
-  }
-  .buttonsub {
-   text-align: center;
-   
-   text-transform: uppercase;
+  .form-control:focus , .form- select:focus  {
+  
+    
+    -webkit-box-shadow: none;
+    text-align: center;
+    text-transform: lowercase;
+    letter-spacing: 7px;
+    color: #14213D;
+    
   }
 
   .linker {
-   color: #198754;
-   
-   letter-spacing: 5px;
-   
-   text-align: center;
-   text-decoration: none;
-   text-transform: uppercase;
-   font-size:  11px;
+    color: white;
+    letter-spacing: 5px;
+    text-align: center;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size:  11px;
  }
- .linker:hover {
-   color: #198754;
-   
+  .linker:hover {
+    color: #FCA311;
  }
- .btn {
-     border-radius: 40px;
- }
+
+
+ 
+ 

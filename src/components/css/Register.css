@@ -2,18 +2,6 @@
     background-color: #198754;
   }
   
-  body {
-   background-image: linear-gradient(180deg, rgba(25, 135, 84, 1) 0%, rgba(92, 170, 134, 1) 33%, rgba(140, 195, 170, 1) 55%, rgba(188, 220, 206, 1) 78%, rgba(255, 255, 255, 1) 100%);
-   height : 800px;
-   background-repeat: no-repeat;
-   background-attachment: fixed;
-  }
-
-  #formm {
-    opacity: 0.9;
-    border-radius: 20px;
-    
-  }
   h3 {
    color: #198754;
    line-height: 1.7;
@@ -32,12 +20,7 @@
    
    text-transform: lowercase;
   }
-  span {
-   line-height: 1.65;
-   letter-spacing: 10px;
-   word-spacing: 4px;
-   text-align: left;
-  }
+  
   .boxgreen {
    border-color: #198754;
    border-radius: 40px;
@@ -49,47 +32,10 @@
    text-transform: uppercase;
   }
 
-  .linker {
-   color: #198754;
+  
    
-   letter-spacing: 5px;
-   
-   text-align: center;
-   text-decoration: none;
-   text-transform: uppercase;
-   font-size:  11px;
- }
- .linker:hover {
-   color: #198754;
-   
- }
- input[type=text] {
-  color: #198754;
- }
 
- .form-control:focus , .form-select:focus  {
-  
-  border-color: #198754 ;
-  -webkit-box-shadow: none;
-  text-align: center;
-  text-transform: lowercase;
-  letter-spacing: 7px;
-  color: #198754;
-  
-}
 
-.form-control , .form-select  {
-  
-  border-color: #198754 ;
-  -webkit-box-shadow: none;
-  text-align: center;
-  text-transform: lowercase;
-  letter-spacing: 7px;
-  color: #198754;
-  border-radius: 40px;
-  opacity: 85%;
-  
-}
 
 
 
