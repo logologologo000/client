@@ -5,338 +5,255 @@ function admin() {
     return (
         <div>
 
-            <div className="container-fluid mt-4">
+            <div className="container-fluid ">
                 <div className="row">
                     {
                         //Status
                     }
-                    <div className=" col col-sm-5 col-12 mb-4" >
+                    <div className="col-lg-4 col-md-5 col-sm-8 col-8 m-auto mt-4">
+                        <div className="formmmm p-4">
+                            <h6 className="color-white mb-3 lt-sp ">STATUS</h6>
+                            <div className="border-content p-4 container">
+                                <div className="row ">
+                                    {
+                                        //Left 
+                                    }
+                                    <div className="color-white lt-sp col-6 tac ">
+                                        <p >
+                                            requests
+                                        </p>
+                                        <p type="buttom" className="dot-red mx-auto mt-3">
 
-                        <div className="area card  widthcard p-3">
-                            <h5 className="card-title xcenter wordupper">
-                                Status
-                            </h5>
-                            <div className="row">
-                                <div className="col-6">
-                                    <h6 className=" text-muted wordlower ">
-                                        request
-                                    </h6>
-                                    <h6 className=" text-muted wordlower ">
-                                        fixing
-                                    </h6>
-                                    <h6 className=" text-muted wordlower ">
-                                        fixed
-                                    </h6>
-                                    <h6 className=" text-muted wordlower ">
-                                        class
-                                    </h6>
-                                    <h6 className=" text-muted wordlower ">
-                                        TA
-                                    </h6>
-                                    <h6 className=" text-muted wordlower ">
-                                        total request
-                                    </h6>
-                                </div>
-                                <div className="col-6">
-                                    <h6 className=" text-muted wordlower ">
-                                        70 unit
-                                    </h6>
-                                    <h6 className=" text-muted wordlower ">
-                                        3 unit
-                                    </h6>
-                                    <h6 className=" text-muted wordlower ">
-                                        7 unit
-                                    </h6>
-                                    <h6 className=" text-muted wordlower ">
-                                        5 unit
-                                    </h6>
-                                    <h6 className=" text-muted wordlower ">
-                                        4 unit
-                                    </h6>
-                                    <h6 className=" text-muted wordlower ">
-                                        80 unit
-                                    </h6>
+                                        </p>
+                                        <p type="buttom" className="dot-yellow mx-auto mt-4" >
 
+                                        </p>
+                                        <p type="buttom" className="dot-green mx-auto my-4">
+
+                                        </p>
+                                        <p >
+                                            users
+                                        </p>
+                                        <p >
+                                            notices
+                                        </p>
+                                        <p >
+                                            TA
+                                        </p>
+                                    </div>
+                                    {
+                                        //Right 
+                                    }
+                                    <div className="color-white lt-sp col-6 tac ">
+                                        <p >
+                                            6
+                                        </p>
+                                        <p >
+                                            2
+                                        </p>
+                                        <p >
+                                            2
+                                        </p>
+                                        <p >
+                                            2
+                                        </p>
+                                        <p >
+                                            7
+                                        </p>
+                                        <p >
+                                            3
+                                        </p>
+                                        <p >
+                                            3
+                                        </p>
+                                    </div>
                                 </div>
+
+
+
+
                             </div>
-
-
                         </div>
 
-
                     </div>
-
                     {
-                        //List
+                        //Create Notice
                     }
+                    <div className="col-lg-4 col-md-5 col-sm-8 col-8 m-auto mt-4">
+                        <div className="formmmm tac p-4">
+                            <div>
 
-                    <div className="col col-12 col-sm-7 ">
-                        <div className="">
-                            {
-                                // rows
-                            }
-                            <div className="area card widthcard list-scroll p-3 " >
-
-                                {
-                                    //loop here
-                                }
-
-                                
-                                    <div className="card-body pdd-0">
-                                        <div>
-                                            <h5 className="card-title d-inline">404 Not Found</h5>
-                                            <button
-
-                                                className="d-inline-f-r btn btn-outline-success btn-sm  buttontext"
-
-                                            >
-                                                fix
-                                            </button>
-                                            <button
-                                                className=" d-inline-f-r btn btn-outline-success btn-sm   buttontext"
-                                                data-bs-toggle="collapse" data-bs-target="#idcol1"
-                                            >
-                                                view
-                                            </button>
-                                        </div>
-
-                                        <h6 className="card-subtitle my-1 text-muted">Pannawit</h6>
-
-                                        <div class="collapse" id="idcol1">
-                                            <div class="py-1">
-
-                                                <p >
-                                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit quod
-                                                    ullam aliquam magnam! Exercitationem veritatis ab, sequi harum
-                                                    blanditiis rem!
-                                                </p>
-                                            </div>
-                                        </div>
-                                        <hr />
-                                    </div>
-                                
-
-                                <div id="contents">
-                                    <div className="card-body pdd-0">
-                                        <div>
-                                            <h5 className="card-title d-inline">404 Not Found</h5>
-                                            <button
-
-                                                className="d-inline-f-r btn btn-outline-success btn-sm  buttontext"
-
-                                            >
-                                                fix
-                                            </button>
-                                            <button
-                                                className=" d-inline-f-r btn btn-outline-success btn-sm   buttontext"
-                                                data-bs-toggle="collapse" data-bs-target="#idcol2"
-                                            >
-                                                view
-                                            </button>
-                                        </div>
-
-                                        <h6 className="card-subtitle my-1 text-muted">Pannawit</h6>
-
-                                        <div class="collapse" id="idcol2">
-                                            <div class="py-1">
-
-                                                <p >
-                                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit quod
-                                                    ullam aliquam magnam! Exercitationem veritatis ab, sequi harum
-                                                    blanditiis rem!
-                                                </p>
-                                            </div>
-                                        </div>
-                                        <hr />
-                                    </div>
-                                </div>
-
-                                <div id="contents">
-                                    <div className="card-body pdd-0">
-                                        <div>
-                                            <h5 className="card-title d-inline">404 Not Found</h5>
-                                            <button
-
-                                                className="d-inline-f-r btn btn-outline-success btn-sm  buttontext"
-
-                                            >
-                                                fix
-                                            </button>
-                                            <button
-                                                className=" d-inline-f-r btn btn-outline-success btn-sm   buttontext"
-                                                data-bs-toggle="collapse" data-bs-target="#idcol3"
-                                            >
-                                                view
-                                            </button>
-                                        </div>
-
-                                        <h6 className="card-subtitle my-1 text-muted">Pannawit</h6>
-
-                                        <div class="collapse" id="idcol3">
-                                            <div class="py-1">
-
-                                                <p >
-                                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit quod
-                                                    ullam aliquam magnam! Exercitationem veritatis ab, sequi harum
-                                                    blanditiis rem!
-                                                </p>
-                                            </div>
-                                        </div>
-                                        <hr />
-                                    </div>
-                                </div>
-
-                                <div id="contents">
-                                    <div className="card-body pdd-0">
-                                        <div>
-                                            <h5 className="card-title d-inline">404 Not Found</h5>
-                                            <button
-
-                                                className="d-inline-f-r btn btn-outline-success btn-sm  buttontext"
-
-                                            >
-                                                fix
-                                            </button>
-                                            <button
-                                                className=" d-inline-f-r btn btn-outline-success btn-sm   buttontext"
-                                                data-bs-toggle="collapse" data-bs-target="#idcol4"
-                                            >
-                                                view
-                                            </button>
-                                        </div>
-
-                                        <h6 className="card-subtitle my-1 text-muted">Pannawit</h6>
-
-                                        <div class="collapse" id="idcol4">
-                                            <div class="py-1">
-
-                                                <p >
-                                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit quod
-                                                    ullam aliquam magnam! Exercitationem veritatis ab, sequi harum
-                                                    blanditiis rem!
-                                                </p>
-                                            </div>
-                                        </div>
-                                        <hr />
-                                    </div>
-                                </div>
-
-                                <div id="contents">
-                                    <div className="card-body pdd-0">
-                                        <div>
-                                            <h5 className="card-title d-inline">404 Not Found</h5>
-                                            <button
-
-                                                className="d-inline-f-r btn btn-outline-success btn-sm  buttontext"
-
-                                            >
-                                                fix
-                                            </button>
-                                            <button
-                                                className=" d-inline-f-r btn btn-outline-success btn-sm   buttontext"
-                                                data-bs-toggle="collapse" data-bs-target="#idcol5"
-                                            >
-                                                view
-                                            </button>
-                                        </div>
-
-                                        <h6 className="card-subtitle my-1 text-muted">Pannawit</h6>
-
-                                        <div class="collapse" id="idcol5">
-                                            <div class="py-1">
-
-                                                <p >
-                                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit quod
-                                                    ullam aliquam magnam! Exercitationem veritatis ab, sequi harum
-                                                    blanditiis rem!
-                                                </p>
-                                            </div>
-                                        </div>
-                                        <hr />
-                                    </div>
-                                </div>
-
-                                <div id="contents">
-                                    <div className="card-body pdd-0 ">
-                                        <div>
-                                            <h5 className="card-title d-inline">404 Not Found</h5>
-                                            <button
-
-                                                className="d-inline-f-r btn btn-outline-success btn-sm  buttontext"
-
-                                            >
-                                                fix
-                                            </button>
-                                            <button
-                                                className=" d-inline-f-r btn btn-outline-success btn-sm   buttontext"
-                                                data-bs-toggle="collapse" data-bs-target="#idcol6"
-                                            >
-                                                view
-                                            </button>
-                                        </div>
-
-                                        <h6 className="card-subtitle my-1 text-muted">Pannawit</h6>
-
-                                        <div class="collapse" id="idcol6">
-                                            <div class="py-1">
-
-                                                <p >
-                                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit quod
-                                                    ullam aliquam magnam! Exercitationem veritatis ab, sequi harum
-                                                    blanditiis rem!
-                                                </p>
-                                            </div>
-                                        </div>
-                                        <hr />
-                                    </div>
-                                </div>
-
-                                <div id="contents">
-                                    <div className="card-body pdd-0">
-                                        <div>
-                                            <h5 className="card-title d-inline">404 Not Found</h5>
-                                            <button
-
-                                                className="d-inline-f-r btn btn-outline-success btn-sm  buttontext"
-
-                                            >
-                                                fix
-                                            </button>
-                                            <button
-                                                className=" d-inline-f-r btn btn-outline-success btn-sm   buttontext"
-                                                data-bs-toggle="collapse" data-bs-target="#idcol7"
-                                            >
-                                                view
-                                            </button>
-                                        </div>
-
-                                        <h6 className="card-subtitle my-1 text-muted">Pannawit</h6>
-
-                                        <div class="collapse" id="idcol7">
-                                            <div class="py-1">
-
-                                                <p >
-                                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit quod
-                                                    ullam aliquam magnam! Exercitationem veritatis ab, sequi harum
-                                                    blanditiis rem!
-                                                </p>
-                                            </div>
-                                        </div>
-                                        <hr />
-                                    </div>
-                                </div>
-
-
+                                <h5 className="color-yellow lt-sp mx-3 ">CREATE NOTICE</h5>
+                                <div type="buttom" className="ic-add mt-4" >+</div>
                             </div>
+
+                            <div className="list-scroll p-2">
+                                <div className="border-content-s mt-4 p-4">
+                                    <p className="color-white m-auto">Not Found Object</p>
+                                </div>
+                                <div className="border-content-s mt-4 p-4">
+                                    <p className="color-white m-auto">Not Found Object</p>
+                                </div>
+                                <div className="border-content-s mt-4 p-4">
+                                    <p className="color-white m-auto">Not Found Object</p>
+                                </div>
+                                <div className="border-content-s mt-4 p-4">
+                                    <p className="color-white m-auto">Not Found Object</p>
+                                </div>
+                                <div className="border-content-s mt-4 p-4">
+                                    <p className="color-white m-auto">Not Found Object</p>
+                                </div>
+                                <div className="border-content-s mt-4 p-4">
+                                    <p className="color-white m-auto">Not Found Object</p>
+                                </div>
+                            </div>
+
                         </div>
 
 
                     </div>
+                    {
+                        //List req
+                    }
+                    <div className="col-lg-4 col-md-8 col-sm-8 col-8 m-auto mt-4">
+                        <div className="formmmm p-4">
+                            <input type="text" className="form-control searches m-auto"
+                                placeholder="input someting..." />
+                            <div className="border-content mt-3">
+                                <div className="list-scroll p-3">
+                                    {
+                                        //loop here
+                                    }
+                                    <div className="p-2 tac">
+                                        <h6 className="color-yellow lt-sp dpib">404 not found</h6>
 
+                                        <div className="dpib f-r">
+                                            <div type="button" className="bt-class lt-sp mx-3 ">
+                                                <p className="pin">fix</p>
+
+                                            </div>
+                                            <div type="button" className="bt-class lt-sp  mb-3" data-bs-toggle="collapse" data-bs-target="#idcol1" >
+                                                <p className="pin">view</p>
+                                            </div>
+
+                                        </div>
+                                        <br />
+                                        <div class="collapse" id="idcol1">
+                                        
+                                            <div class="py-1 dpib">
+
+                                                <p className="color-white" >
+                                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit quod
+                                                    ullam aliquam magnam! Exercitationem veritatis ab, sequi harum
+                                                    blanditiis rem!
+                                                </p>
+                                            </div>
+                                        </div>
+
+                                        <hr class="mt-5" />
+                                    </div>
+
+                                    <div className="p-2 tac">
+                                        <h6 className="color-yellow lt-sp dpib">404 not found</h6>
+
+                                        <div className="dpib f-r">
+                                            <div type="button" className="bt-class lt-sp mx-3 ">
+                                                <p className="pin">fix</p>
+
+                                            </div>
+                                            <div type="button" className="bt-class lt-sp  mb-3" data-bs-toggle="collapse" data-bs-target="#idcol1" >
+                                                <p className="pin">view</p>
+                                            </div>
+
+                                        </div>
+                                        <br />
+                                        <div class="collapse" id="idcol1">
+                                            <div class="py-1 dpib">
+
+                                                <p className="color-white" >
+                                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit quod
+                                                    ullam aliquam magnam! Exercitationem veritatis ab, sequi harum
+                                                    blanditiis rem!
+                                                </p>
+                                            </div>
+                                        </div>
+
+                                        <hr class="mt-5" />
+                                    </div>
+
+                                    <div className="p-2 tac">
+                                        <h6 className="color-yellow lt-sp dpib">404 not found</h6>
+
+                                        <div className="dpib f-r">
+                                            <div type="button" className="bt-class lt-sp mx-3 ">
+                                                <p className="pin">fix</p>
+
+                                            </div>
+                                            <div type="button" className="bt-class lt-sp  mb-3" data-bs-toggle="collapse" data-bs-target="#idcol1" >
+                                                <p className="pin">view</p>
+                                            </div>
+
+                                        </div>
+                                        <br />
+                                        <div class="collapse" id="idcol1">
+                                            
+                                            <div class="py-1 dpib">
+
+                                                <p className="color-white" >
+                                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit quod
+                                                    ullam aliquam magnam! Exercitationem veritatis ab, sequi harum
+                                                    blanditiis rem!
+                                                </p>
+                                            </div>
+                                        </div>
+
+                                        <hr class="mt-5" />
+                                    </div>
+
+                                    <div className="p-2 tac">
+                                        <h6 className="color-yellow lt-sp dpib">404 not found</h6>
+
+                                        <div className="dpib f-r">
+                                            <div type="button" className="bt-class lt-sp mx-3 ">
+                                                <p className="pin">fix</p>
+
+                                            </div>
+                                            <div type="button" className="bt-class lt-sp  mb-3" data-bs-toggle="collapse" data-bs-target="#idcol1" >
+                                                <p className="pin">view</p>
+                                            </div>
+
+                                        </div>
+                                        <br />
+                                        <div class="collapse" id="idcol1">
+                                            <div class="py-1 dpib">
+
+                                                <p className="color-white" >
+                                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit quod
+                                                    ullam aliquam magnam! Exercitationem veritatis ab, sequi harum
+                                                    blanditiis rem!
+                                                </p>
+                                            </div>
+                                        </div>
+
+                                        <hr />
+                                    </div>
+
+                                </div>
+                            </div>
+
+                        </div>
+
+                    </div>
                 </div>
             </div>
+
+
         </div>
     )
 }
 
 export default admin
+
+
+
+

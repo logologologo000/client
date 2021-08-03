@@ -4,11 +4,12 @@
    }
 
    span {
-    line-height: 1.65;
     letter-spacing: 10px;
     word-spacing: 4px;
-    text-align: left;
+    
+    
    }
+   
 
    
    /* input */
@@ -18,13 +19,24 @@
     text-transform: lowercase;
     letter-spacing: 7px;
     color: #14213D;
+    border-radius: 25px;
    }
 
-   input[type=password] {
+   input[type=password], input[type=email] {
     text-align: center;
     text-transform: lowercase;
     letter-spacing: 7px;
     color: #14213D;
+    border-radius: 25px;
+
+   }
+
+   .form-select {
+    text-align: center;
+    text-transform: lowercase;
+    letter-spacing: 7px;
+    color: #14213D;
+    border-radius: 25px;
    }
 
    .input-r {
@@ -42,17 +54,69 @@
     color: #FCA311;
     }
 
+    label {
+    color: white;
+    line-height: 1.65;
+    letter-spacing: 10px;
+    word-spacing: 4px;
+    text-align: left;
+    text-transform: lowercase;
+    }
 
-    /* button */
+
+    /* button yellow */
     
    .btn-yellow {
-       border-radius: 15px;
+       border-radius: 25px;
        background-color: #FCA311;
-       border: none;
+       border:3px solid #14213D;  
+       font-weight: bold;
+       color: #14213D;
        height : 40px;
        padding : 5px 15px 5px 15px;
        
    }
+   .btn-yellow:hover {
+    border-radius: 25px;
+    border:3px solid #FCA311;
+    background-color: #14213D;
+    color:#FCA311;
+    font-weight: bold;
+    height : 40px;
+    padding : 5px 15px 5px 15px;
+    
+    }
+    
+    /* cutton-white */
+      
+    .bt-class {
+      color: white;
+      border: 2px solid white;
+      border-radius:30px;
+      width: 90px;
+      height:20px;
+      display: inline-block;
+      text-align: center;
+    }
+
+    .bt-class:hover {
+      color: #14213D;
+      border: 2px solid #14213D;
+      background-color: #fff;
+      border-radius:30px;
+      width: 90px;
+      height:20px;
+      display: inline-block;
+      text-align: center;
+    }
+
+    .pin {
+      letter-spacing: 10px;
+      word-spacing: 4px;
+      position: relative;
+      margin-top: -5px;
+      margin-left: 8px;
+    }
 
    hr {
        color: white;
@@ -63,9 +127,96 @@
        
    }
 
+   /* bootstrap form */
+
    form {
     opacity: 100%;
    }
 
+   .formmmm {
+    border-radius: 20px;
+    box-shadow: 4px 4px 4px #FCA311;
+    background-color: #14213D;
+    height: 500px;
+   
+  }
+
+  .form-control  {
+    
+    background-color: #fff;
+    border: none;
+    -webkit-box-shadow: none;
+    text-transform: lowercase;
+    letter-spacing: 7px;
+  }
+
+  
+
+  .form-control:focus , .form-select:focus   {
+  
+    
+    -webkit-box-shadow: none;
+    text-align: center;
+    text-transform: lowercase;
+    letter-spacing: 7px;
+    color: #14213D;
+    
+  }
+
+  /*content*/
+
+  .border-content {
+    border: 2px solid white;
+    border-radius: 15px; 
+    height: 90%;
+
+  }
+  .border-content-s {
+    border: 2px solid white;
+    border-radius: 15px; 
    
 
+  }
+
+  .lt-sp {
+      letter-spacing:4px;
+  }
+
+  .tac {
+      text-align:center;
+  }
+
+  .dpi {
+      display: inline;
+  }
+
+  .dpb {
+    display: block;
+  }
+
+  .dpib {
+    display: inline-block;
+  }
+  
+  .searches {
+    width: 250px;
+    height : 20px;
+  }
+
+  .f-r {
+    
+    position: relative;
+    
+
+
+  }
+
+  .f-l {
+    float: left;
+  }
+
+
+  .h-a {
+    height:auto !important;
+  }
+  

@@ -1,36 +1,4 @@
-  #list:hover {
-    background-color: #198754;
-  }
-  
-  h3 {
-   color: #198754;
-   line-height: 1.7;
-   letter-spacing: 7px;
-   word-spacing: 5px;
-   text-align: center;
-   text-decoration: none;
-   text-transform: uppercase;
-  }
-  label {
-   color: #198754;
-   line-height: 1.65;
-   letter-spacing: 10px;
-   word-spacing: 4px;
-   text-align: left;
-   
-   text-transform: lowercase;
-  }
-  
-  .boxgreen {
-   border-color: #198754;
-   border-radius: 40px;
-   color : #198754;
-  }
-  .buttonsub {
-   text-align: center;
-   border-radius: 40px;
-   text-transform: uppercase;
-  }
+
 
   
    

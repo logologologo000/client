@@ -22,6 +22,44 @@
 
 .imgu {
     width: 300px;
-    height: 300px;
+    height: 200px;
     border-radius: 15px;
 }
+
+.white-content {
+    background-color: #fff;
+    border-radius: 15px;
+}
+
+.desc {
+    position: absolute;
+}
+
+.note {
+    height: 150px;
+}
+
+.note-scroll {
+    height:120px;
+    overflow:scroll;
+    overflow-x:hidden;
+}
+
+.desc-scroll {
+    height:150px;
+    overflow:scroll;
+    overflow-x:hidden;
+    width: auto;
+    margin-right:30px
+    
+}
+
+.desc-text {
+   
+}
+
+
+.name-left {
+    position: static;  
+}
+
