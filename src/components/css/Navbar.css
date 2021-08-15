@@ -53,6 +53,17 @@
   border: 2px solid white;
   border-radius: 30px;
   color: white;
+  background-color: rgb(255, 255, 255);
+
+}
+
+.togglor-custom:hover {
+  border: 2px solid white;
+  border-radius: 30px;
+  background-color: rgb(255, 255, 255);
+  color: white;
+
+  box-shadow: 1px 2px 3px #FCA311;
 }
 
 .navbar-toggler:focus  {
@@ -60,4 +71,26 @@
   -webkit-box-shadow: none;
 
   
+}
+
+.disable {
+  
+  position:relative;
+  text-decoration: none;
+  color: #ffffff;
+  font-size: 15px;
+  letter-spacing: 7px;
+  margin-left: 20px;
+  opacity: 70%;
+}
+
+.disable:hover {
+  
+  position:relative;
+  text-decoration: none;
+  color: #ffffff;
+  font-size: 15px;
+  letter-spacing: 7px;
+  margin-left: 20px;
+  opacity: 70%;
 }

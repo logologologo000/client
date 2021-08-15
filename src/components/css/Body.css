@@ -69,19 +69,21 @@
    .btn-yellow {
        border-radius: 25px;
        background-color: #FCA311;
-       border:3px solid #14213D;  
-       font-weight: bold;
+       border:2px solid #FCA311;  
+       font-weight: initial;
        color: #14213D;
        height : 40px;
+       width: 200px;
        padding : 5px 15px 5px 15px;
        
    }
    .btn-yellow:hover {
     border-radius: 25px;
-    border:3px solid #FCA311;
-    background-color: #14213D;
-    color:#FCA311;
-    font-weight: bold;
+    border:2px solid rgb(255, 255, 255);
+    background-color: #fca21100;
+    color:#ffffff;
+    font-weight: initial;
+
     height : 40px;
     padding : 5px 15px 5px 15px;
     
@@ -138,6 +140,14 @@
     box-shadow: 4px 4px 4px #FCA311;
     background-color: #14213D;
     height: 500px;
+   
+  }
+
+  .formmmmre {
+    border-radius: 20px;
+    box-shadow: 4px 4px 4px #FCA311;
+    background-color: #14213D;
+    height: auto;
    
   }
 
@@ -220,3 +230,21 @@
     height:auto !important;
   }
   
+
+  .list-scroll {
+    width: 100%;
+    height: 100%;
+    overflow:scroll;
+    overflow-x:hidden;
+    
+    
+}
+
+table {
+ 
+  text-align: center;
+}
+td {
+  width: 1000px;
+  height: 50px;
+}

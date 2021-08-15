@@ -13,7 +13,7 @@ function navbar() {
                     </a>
 
                 <button 
-                    class="navbar-toggler dpib togglor-custom" 
+                    class="navbar-toggler dpib togglor-custom my-2" 
                     type="button"
                     data-bs-toggle="collapse"  
                     data-bs-target="#navbarNavAltMarkup"
@@ -32,18 +32,18 @@ function navbar() {
 
                    
                         <a href="#"
-                        className="fixed-navleft dpib mx-4"
+                        className=" dpib mx-4 my-2 disable"
                     >
                          Pannawit.Ch
                     </a>
                     <a href="#"
-                        className="fixed-navright mx-4"
+                        className="fixed-navright mx-4 my-2"
                     >
                         Management
                     </a>
 
                     <a href="#"
-                        className="fixed-navright mx-4"
+                        className="fixed-navright mx-4 my-2"
                     >
                         SignOut
                     </a>

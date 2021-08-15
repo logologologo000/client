@@ -16,7 +16,7 @@ function users() {
                             +
                         </div>
                         <br />
-                        <div className="list-scroll p-3 border-content mt-3" >
+                        <div className="list-scroll-cus p-3 border-content mt-3" >
                             {
                                 //loop here
                             }

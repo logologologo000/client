@@ -28,7 +28,7 @@ function signin() {
 
                             <hr />
                             <center>
-                                <div className="mt-5 center-item" >
+                                <div className="mt-5 " >
                                     <button className="btn-yellow ">
                                          <span>LOGIN</span>
                                     </button>

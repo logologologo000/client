@@ -7,9 +7,9 @@ function Register() {
       <div className="container my-5 p-2">
         <div className="row">
 
-          <div className=" col-lg-7 col-md-9 m-auto formmmm " >
+          <div className=" col-lg-7 col-md-9 m-auto formmmmre " >
             <form action="#" className="p-5" >
-              <h3 className="color-yellow">Student REgistration</h3>
+              <h3 className="color-yellow lt-sp">STUDENT REGISTRATION</h3>
               <hr />
               <div className="row">
                 {
@@ -36,7 +36,7 @@ function Register() {
                     <label className="mx-3" htmlFor="email">E-mail </label>
                     <input className="form-control" type="email" name="email" />
                   </div>
-                 
+
                 </div>
                 {
                   //right side form
@@ -72,24 +72,29 @@ function Register() {
                       <option value="3">COM 3303 sec 11</option>
                     </select>
                   </div>
+                  <br />
                 </div>
-              </div>
-              <hr />
 
-              {
+
+                <hr />
+                {
                   //button
-              }
-              <div className="mt-5 mx-auto buttonsub">
-                <button
-                  className=" buttonsub btn-yellow "
+                }
+                <center>
+                  <div className="center-item">
+                    <button
+                      className="btn-yellow"
 
-                >
-                  <span>submit</span>
-                </button>
+                    >
+                      <span>submit</span>
+                    </button>
+                  </div>
+                </center>
               </div>
-              <div className="mt-1 mx-auto buttonsub">
-                <a href="#" className="linker">Admin</a>
-              </div>
+
+
+
+
 
             </form>
           </div>
