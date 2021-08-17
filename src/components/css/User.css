@@ -72,3 +72,13 @@
     position: static;  
 }
 
+
+.create-note-left {
+    display: inline-block;
+    margin-left:30px;
+}
+
+.create-note-right {
+    display: inline-block;
+    margin-right:30px;
+}
