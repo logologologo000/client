@@ -20,6 +20,8 @@ function signin() {
                             <div className="my-3" >
                                 <label for="" className="mx-3 color-white" >username  </label>
                                 <input className="form-control input-r" type="text" name="username" />
+  
+
                             </div>
                             <div className="" >
                                 <label for="" className="mx-3 color-white " >password  </label>
