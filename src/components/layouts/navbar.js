@@ -13,7 +13,7 @@ function navbar() {
                     </a>
 
                 <button 
-                    class="navbar-toggler dpib togglor-custom my-2" 
+                    class="navbar-toggler dpib togglor-custom my-2 mx-2" 
                     type="button"
                     data-bs-toggle="collapse"  
                     data-bs-target="#navbarNavAltMarkup"

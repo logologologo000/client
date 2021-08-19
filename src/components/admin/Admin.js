@@ -1,5 +1,5 @@
 import React from 'react'
-import './css/Admin.css'
+import '../css/Admin.css'
 
 function admin() {
     return (

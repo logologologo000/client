@@ -50,7 +50,8 @@
 }
 
 .togglor-custom {
-  border: 2px solid white;
+  border: 0px solid white;
+  height: 22px;
   border-radius: 30px;
   color: white;
   background-color: rgb(255, 255, 255);
@@ -58,7 +59,7 @@
 }
 
 .togglor-custom:hover {
-  border: 2px solid white;
+  border: 0px solid white;
   border-radius: 30px;
   background-color: rgb(255, 255, 255);
   color: white;
