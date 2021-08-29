@@ -26,8 +26,8 @@ const Management = () => {
                             <div className="mt-3">
                                 <h5 className="dpb color-yellow lt-sp">61123832</h5>
                                 <p className="dpib color-white mb-1 lt-sp">pannawit</p>
-                                <div className="dpib upload-btn f-r" type="button">
-                                    <span className="color-white">
+                                <div className="dpib upload-btn f-r color-white" type="button">
+                                    <span className="spann">
                                         fix
                                     </span>
                                 </div> 

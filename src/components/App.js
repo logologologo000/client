@@ -7,15 +7,19 @@ import User from './user/Users.js'
 import CreateNo from './admin/CreateNo.js'
 import EditNo from './admin/EditNo.js'
 import Management from './admin/Management.js'
-
+import MFixUser from './user/MFix.js'
+import MFixAdmin from './admin/MFix.js'
+import UserNoices from './user/Notice.js'
+import CreateRequest from './user/CreateReq.js'
 
 function App() {
   return (
 
           <div>
             <Navbar />
-            <CreateNo />
-            <Management /> 
+            <CreateRequest />
+            <MFixUser />
+             
             
             
           </div>
@@ -23,6 +27,7 @@ function App() {
   );
 }
 
-// ทำหน้า management fix
+// build  the UserNotice page.
+// check number of the page.
 
 export default App;

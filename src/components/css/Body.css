@@ -14,11 +14,27 @@
    
    /* input */
 
-   input[type=text] {
-    text-align: center;
+   textarea {
+    resize: none;
+    text-align:left;
     text-transform: lowercase;
-    letter-spacing: 7px;
-    color: #14213D;
+    letter-spacing: 2px;
+    border-radius: 20px;
+    border: none;
+    padding: 10px 10px;
+    height:200px;
+  }
+
+  textarea:focus {
+    
+    outline: none;
+    
+  }
+
+   input[type=text] {
+    text-align: start;
+    text-transform: lowercase;
+    letter-spacing: 2px;
     border-radius: 25px;
    }
 
@@ -163,10 +179,9 @@
   
 
   .form-control:focus , .form-select:focus   {
-  
-    
+
     -webkit-box-shadow: none;
-    text-align: center;
+    text-align: start;
     text-transform: lowercase;
     letter-spacing: 7px;
     color: #14213D;
@@ -244,7 +259,23 @@ table {
  
   text-align: center;
 }
+
 td {
   width: 1000px;
   height: 50px;
 }
+
+.flex-container {
+  flex-direction: row;
+  flex-wrap: wrap;
+  
+}
+
+.flex-height-fix {
+height: 360px;
+}
+
+.wrap-fix {
+  width: 50%;
+}
+
