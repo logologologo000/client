@@ -11,14 +11,29 @@ import MFixUser from './user/MFix.js'
 import MFixAdmin from './admin/MFix.js'
 import UserNoices from './user/Notice.js'
 import CreateRequest from './user/CreateReq.js'
+import FixReq from './admin/FixReq.js'
 
 function App() {
   return (
 
           <div>
+
             <Navbar />
+            <Signin />
+            <Register />
+            <Admin />
+            <CreateNo />
+            <EditNo />
+            <Management />
+            <MFixAdmin />
+            <FixReq />
+            
+
+            <User />
             <CreateRequest />
+            <UserNoices />
             <MFixUser />
+
              
             
             
@@ -27,7 +42,7 @@ function App() {
   );
 }
 
-// build  the UserNotice page.
-// check number of the page.
+// build a promblems fix page
+
 
 export default App;

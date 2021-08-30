@@ -4,10 +4,10 @@ import './css/Register.css'
 function Register() {
   return (
     <div>
-      <div className="container my-5 p-2">
+      <div className="container-fluid my-5 p-2">
         <div className="row">
 
-          <div className=" col-lg-7 col-md-9 m-auto formmmmre " >
+          <div className="col-11 col-lg-7 col-md-9 m-auto formmmmre " >
             <form action="#" className="p-5" >
               <h3 className="color-yellow lt-sp">STUDENT REGISTRATION</h3>
               <hr />
