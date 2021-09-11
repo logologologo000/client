@@ -1,13 +1,12 @@
 import React from 'react'
 import '../css/Navbar.css'
 import {Link, Route, Switch} from 'react-router-dom'
-import Admin from '../admin/Admin.js'
-import Management from '../admin/Management.js'
+import User from '../user/Users.js'
+import Notice from '../user/Notice.js'
 import Signin from '../Signin.js'
-import MFixAdmin from '../admin/MFix.js'
-import CreateNo from '../admin/CreateNo.js'
-import FixReq from '../admin/FixReq.js'
-import EditNo from '../admin/EditNo.js'
+import CreateRequest from '../user/CreateReq'
+import EditRequest from '../user/EditReq'
+import Management from '../user/MFix'
 
 const refreshPage = ()=>{
     window.location.reload();
@@ -21,7 +20,7 @@ function navbar() {
             <div className="container-fluid">
             
             <Link to="/" className="navmain fixed-navleft dpib">
-                        ADMIN
+                        User
                     </Link>
 
                 <button 
@@ -48,6 +47,12 @@ function navbar() {
                     >
                          Pannawit.Ch
                     </a>
+                    <Link to="/notice"
+                        className="fixed-navright mx-4 my-2"
+                    >
+                        Notice
+                    </Link>
+
                     <Link to="/management"
                         className="fixed-navright mx-4 my-2"
                     >
@@ -65,13 +70,13 @@ function navbar() {
             </nav>
         
         <Switch>
-            <Route exact path="/"><Admin /></Route>
-            <Route path="/management"><Management /></Route>
+            <Route exact path="/"><User /></Route>
+            <Route path="/notice"><Notice /></Route>
             <Route path="/signin"><Signin /></Route>
-            <Route path="/fixmanagement"><MFixAdmin/></Route>
-            <Route path="/createnotice"><CreateNo/></Route>
-            <Route path="/editnotice"><EditNo/></Route>
-            <Route path="/fixreq"><FixReq/></Route>
+            <Route path="/createreq"><CreateRequest /></Route>
+            <Route path="/fixreq"><EditRequest /></Route>
+            <Route path="/management"><Management/></Route>
+            
             <Route path="/:id">
                 <h1>Undefined route</h1>
             </Route>

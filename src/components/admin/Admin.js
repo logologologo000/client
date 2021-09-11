@@ -1,5 +1,6 @@
 import React from 'react'
 import '../css/Admin.css'
+import {Link, Route, Switch} from 'react-router-dom'
 
 function admin() {
     return (
@@ -93,28 +94,23 @@ function admin() {
                             <div>
 
                                 <h5 className="color-yellow lt-sp mx-3 ">CREATE NOTICE</h5>
-                                <div type="buttom" className="ic-add mt-4" >+</div>
+                                
+
+                                <Link to="/createnotice" type="button" className="ic-add mt-4" >
+                                   +
+                                    </Link>
+                                
                             </div>
                             <div className="create-notice-border mt-3">
                                 <div className="list-scroll p-2">
-                                    <div className="border-content-s mt-4 p-4">
-                                        <p className="color-white m-auto">Not Found Object</p>
+                                    <div className="border-content-s mt-4">
+                                        <Link to="editnotice">
+                                        <p  className="color-white m-auto p-4">Not Found Object</p>
+                                        </Link>
+                                        
+
                                     </div>
-                                    <div className="border-content-s mt-4 p-4">
-                                        <p className="color-white m-auto">Not Found Object</p>
-                                    </div>
-                                    <div className="border-content-s mt-4 p-4">
-                                        <p className="color-white m-auto">Not Found Object</p>
-                                    </div>
-                                    <div className="border-content-s mt-4 p-4">
-                                        <p className="color-white m-auto">Not Found Object</p>
-                                    </div>
-                                    <div className="border-content-s mt-4 p-4">
-                                        <p className="color-white m-auto">Not Found Object</p>
-                                    </div>
-                                    <div className="border-content-s mt-4 p-4">
-                                        <p className="color-white m-auto">Not Found Object</p>
-                                    </div>
+                                    
                                 </div>
                             </div>
                         </div>
@@ -137,10 +133,10 @@ function admin() {
                                         <h6 className="color-yellow lt-sp dpib mx-5">404 not found</h6>
 
                                         <div className="dpib">
-                                            <div type="button" className="bt-class lt-sp mx-3 ">
+                                            <Link to="/fixreq" type="button" className="bt-class lt-sp mx-3 ">
                                                 <p className="pin">fix</p>
 
-                                            </div>
+                                            </Link>
                                             <div type="button" className="bt-class lt-sp  mx-3" data-bs-toggle="collapse" data-bs-target="#idcol1" >
                                                 <p className="pin">view</p>
                                             </div>
@@ -162,179 +158,7 @@ function admin() {
                                         <hr class="" />
                                     </div>
 
-                                    <div className="p-2 tac">
-                                        <h6 className="color-yellow lt-sp dpib mx-5">404 not found</h6>
-
-                                        <div className="dpib">
-                                            <div type="button" className="bt-class lt-sp mx-3 ">
-                                                <p className="pin">fix</p>
-
-                                            </div>
-                                            <div type="button" className="bt-class lt-sp  mx-3" data-bs-toggle="collapse" data-bs-target="#idcol1" >
-                                                <p className="pin">view</p>
-                                            </div>
-
-                                        </div>
-                                        <br />
-                                        <div class="collapse" id="idcol1">
-                                        
-                                            <div class="py-1 dpib">
-
-                                                <p className="color-white" >
-                                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit quod
-                                                    ullam aliquam magnam! Exercitationem veritatis ab, sequi harum
-                                                    blanditiis rem!
-                                                </p>
-                                            </div>
-                                        </div>
-
-                                        <hr class="" />
-                                    </div>
-
-                                    <div className="p-2 tac">
-                                        <h6 className="color-yellow lt-sp dpib mx-5">404 not found</h6>
-
-                                        <div className="dpib">
-                                            <div type="button" className="bt-class lt-sp mx-3 ">
-                                                <p className="pin">fix</p>
-
-                                            </div>
-                                            <div type="button" className="bt-class lt-sp  mx-3" data-bs-toggle="collapse" data-bs-target="#idcol1" >
-                                                <p className="pin">view</p>
-                                            </div>
-
-                                        </div>
-                                        <br />
-                                        <div class="collapse" id="idcol1">
-                                        
-                                            <div class="py-1 dpib">
-
-                                                <p className="color-white" >
-                                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit quod
-                                                    ullam aliquam magnam! Exercitationem veritatis ab, sequi harum
-                                                    blanditiis rem!
-                                                </p>
-                                            </div>
-                                        </div>
-
-                                        <hr class="" />
-                                    </div>
-
-                                    <div className="p-2 tac">
-                                        <h6 className="color-yellow lt-sp dpib mx-5">404 not found</h6>
-
-                                        <div className="dpib">
-                                            <div type="button" className="bt-class lt-sp mx-3 ">
-                                                <p className="pin">fix</p>
-
-                                            </div>
-                                            <div type="button" className="bt-class lt-sp  mx-3" data-bs-toggle="collapse" data-bs-target="#idcol1" >
-                                                <p className="pin">view</p>
-                                            </div>
-
-                                        </div>
-                                        <br />
-                                        <div class="collapse" id="idcol1">
-                                        
-                                            <div class="py-1 dpib">
-
-                                                <p className="color-white" >
-                                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit quod
-                                                    ullam aliquam magnam! Exercitationem veritatis ab, sequi harum
-                                                    blanditiis rem!
-                                                </p>
-                                            </div>
-                                        </div>
-
-                                        <hr class="" />
-                                    </div>
-
-                                    <div className="p-2 tac">
-                                        <h6 className="color-yellow lt-sp dpib mx-5">404 not found</h6>
-
-                                        <div className="dpib">
-                                            <div type="button" className="bt-class lt-sp mx-3 ">
-                                                <p className="pin">fix</p>
-
-                                            </div>
-                                            <div type="button" className="bt-class lt-sp  mx-3" data-bs-toggle="collapse" data-bs-target="#idcol1" >
-                                                <p className="pin">view</p>
-                                            </div>
-
-                                        </div>
-                                        <br />
-                                        <div class="collapse" id="idcol1">
-                                        
-                                            <div class="py-1 dpib">
-
-                                                <p className="color-white" >
-                                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit quod
-                                                    ullam aliquam magnam! Exercitationem veritatis ab, sequi harum
-                                                    blanditiis rem!
-                                                </p>
-                                            </div>
-                                        </div>
-
-                                        <hr class="" />
-                                    </div>
-
-                                    <div className="p-2 tac">
-                                        <h6 className="color-yellow lt-sp dpib mx-5">404 not found</h6>
-
-                                        <div className="dpib">
-                                            <div type="button" className="bt-class lt-sp mx-3 ">
-                                                <p className="pin">fix</p>
-
-                                            </div>
-                                            <div type="button" className="bt-class lt-sp  mx-3" data-bs-toggle="collapse" data-bs-target="#idcol1" >
-                                                <p className="pin">view</p>
-                                            </div>
-
-                                        </div>
-                                        <br />
-                                        <div class="collapse" id="idcol1">
-                                        
-                                            <div class="py-1 dpib">
-
-                                                <p className="color-white" >
-                                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit quod
-                                                    ullam aliquam magnam! Exercitationem veritatis ab, sequi harum
-                                                    blanditiis rem!
-                                                </p>
-                                            </div>
-                                        </div>
-
-                                        <hr class="" />
-                                    </div>
-
-                                    <div className="p-2 tac">
-                                        <h6 className="color-yellow lt-sp dpib mx-5">404 not found</h6>
-
-                                        <div className="dpib">
-                                            <div type="button" className="bt-class lt-sp mx-3 ">
-                                                <p className="pin">fix</p>
-
-                                            </div>
-                                            <div type="button" className="bt-class lt-sp  mx-3" data-bs-toggle="collapse" data-bs-target="#idcol1" >
-                                                <p className="pin">view</p>
-                                            </div>
-
-                                        </div>
-                                        <br />
-                                        <div class="collapse" id="idcol1">
-                                        
-                                            <div class="py-1 dpib">
-
-                                                <p className="color-white" >
-                                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit quod
-                                                    ullam aliquam magnam! Exercitationem veritatis ab, sequi harum
-                                                    blanditiis rem!
-                                                </p>
-                                            </div>
-                                        </div>
-
-                                        <hr class="" />
-                                    </div>
+                                    
 
                                    
 

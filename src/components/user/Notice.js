@@ -21,13 +21,7 @@ const Notice = () => {
                                 <div>
                                     <h6 className="color-yellow dpib f-l">404 Not Found</h6>
                                     <div className="dpib f-r">
-                                        <div
-
-                                            className="bt-class lt-sp "
-
-                                        >
-                                            <p className="pin ">fix</p>
-                                        </div>
+                                        
                                         <div
                                             data-bs-toggle="collapse" data-bs-target="#idcol1"
                                             className="bt-class lt-sp "
@@ -47,95 +41,7 @@ const Notice = () => {
 
                             </div>
 
-                            <div className="">
-                                <div>
-                                    <h6 className="color-yellow dpib f-l">404 Not Found</h6>
-                                    <div className="dpib f-r">
-                                        <div
-
-                                            className="bt-class lt-sp "
-
-                                        >
-                                            <p className="pin ">fix</p>
-                                        </div>
-                                        <div
-                                            data-bs-toggle="collapse" data-bs-target="#idcol1"
-                                            className="bt-class lt-sp "
-
-                                        >
-                                            <p className="pin ">view</p>
-                                        </div>
-                                    </div>
-
-
-                                </div>
-                                <br />
-                                <br />
-                               
-                                <hr />
-
-
-                            </div>
-
-                            <div className="">
-                                <div>
-                                    <h6 className="color-yellow dpib f-l">404 Not Found</h6>
-                                    <div className="dpib f-r">
-                                        <div
-
-                                            className="bt-class lt-sp "
-
-                                        >
-                                            <p className="pin ">fix</p>
-                                        </div>
-                                        <div
-                                            data-bs-toggle="collapse" data-bs-target="#idcol1"
-                                            className="bt-class lt-sp "
-
-                                        >
-                                            <p className="pin ">view</p>
-                                        </div>
-                                    </div>
-
-
-                                </div>
-                                <br />
-                                <br />
-                               
-                                <hr />
-
-
-                            </div>
-
-                            <div className="">
-                                <div>
-                                    <h6 className="color-yellow dpib f-l">404 Not Found</h6>
-                                    <div className="dpib f-r">
-                                        <div
-
-                                            className="bt-class lt-sp "
-
-                                        >
-                                            <p className="pin ">fix</p>
-                                        </div>
-                                        <div
-                                            data-bs-toggle="collapse" data-bs-target="#idcol1"
-                                            className="bt-class lt-sp "
-
-                                        >
-                                            <p className="pin ">view</p>
-                                        </div>
-                                    </div>
-
-
-                                </div>
-                                <br />
-                                <br />
-                               
-                                <hr />
-
-
-                            </div>
+                            
 
 
 

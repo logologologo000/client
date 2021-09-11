@@ -302,3 +302,11 @@ height: 360px;
   
 }
 
+a {
+  text-decoration: none;
+  color: white;
+}
+
+.cLink {
+  height:100px
+}

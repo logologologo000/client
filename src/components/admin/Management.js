@@ -1,5 +1,5 @@
 import React from 'react'
-
+import {Link, Route} from 'react-router-dom'
 const Management = () => {
     return (
         <div className="container-fluid flex-container text-center ">
@@ -16,63 +16,14 @@ const Management = () => {
                             <div className="mt-3">
                                 <h5 className="dpb color-yellow lt-sp">61123832</h5>
                                 <p className="dpib color-white mb-1 lt-sp">pannawit</p>
-                                <div className="dpib upload-btn f-r color-white" type="button">
+                                <Link to="/fixmanagement" className="dpib upload-btn f-r color-white" type="button">
                                     <span className="spann">
                                         fix
                                     </span>
-                                </div> 
+                                </Link> 
                                 <hr class="mt-2 mb-0"/>
                             </div>
-                            <div className="mt-3">
-                                <h5 className="dpb color-yellow lt-sp">61123832</h5>
-                                <p className="dpib color-white mb-1 lt-sp">pannawit</p>
-                                <div className="dpib upload-btn f-r color-white" type="button">
-                                    <span className="spann">
-                                        fix
-                                    </span>
-                                </div> 
-                                <hr class="mt-2 mb-0"/>
-                            </div>
-                            <div className="mt-3">
-                                <h5 className="dpb color-yellow lt-sp">61123832</h5>
-                                <p className="dpib color-white mb-1 lt-sp">pannawit</p>
-                                <div className="dpib upload-btn f-r color-white" type="button">
-                                    <span className="spann">
-                                        fix
-                                    </span>
-                                </div> 
-                                <hr class="mt-2 mb-0"/>
-                            </div>
-                            <div className="mt-3">
-                                <h5 className="dpb color-yellow lt-sp">61123832</h5>
-                                <p className="dpib color-white mb-1 lt-sp">pannawit</p>
-                                <div className="dpib upload-btn f-r color-white" type="button">
-                                    <span className="spann">
-                                        fix
-                                    </span>
-                                </div> 
-                                <hr class="mt-2 mb-0"/>
-                            </div>
-                            <div className="mt-3">
-                                <h5 className="dpb color-yellow lt-sp">61123832</h5>
-                                <p className="dpib color-white mb-1 lt-sp">pannawit</p>
-                                <div className="dpib upload-btn f-r color-white" type="button">
-                                    <span className="spann">
-                                        fix
-                                    </span>
-                                </div> 
-                                <hr class="mt-2 mb-0"/>
-                            </div>
-                            <div className="mt-3">
-                                <h5 className="dpb color-yellow lt-sp">61123832</h5>
-                                <p className="dpib color-white mb-1 lt-sp">pannawit</p>
-                                <div className="dpib upload-btn f-r color-white" type="button">
-                                    <span className="spann">
-                                        fix
-                                    </span>
-                                </div> 
-                                <hr class="mt-2 mb-0"/>
-                            </div>
+                            
 
                             
                             
@@ -97,63 +48,14 @@ const Management = () => {
                             <div className="mt-3">
                                 <h5 className="dpb color-yellow lt-sp">61123832</h5>
                                 <p className="dpib color-white mb-1 lt-sp">pannawit</p>
-                                <div className="dpib upload-btn f-r color-white" type="button">
+                                <Link to="/fixmanagement" className="dpib upload-btn f-r color-white" type="button">
                                     <span className="spann">
                                         fix
                                     </span>
-                                </div> 
+                                </Link> 
                                 <hr class="mt-2 mb-0"/>
                             </div>
-                            <div className="mt-3">
-                                <h5 className="dpb color-yellow lt-sp">61123832</h5>
-                                <p className="dpib color-white mb-1 lt-sp">pannawit</p>
-                                <div className="dpib upload-btn f-r color-white" type="button">
-                                    <span className="spann">
-                                        fix
-                                    </span>
-                                </div> 
-                                <hr class="mt-2 mb-0"/>
-                            </div>
-                            <div className="mt-3">
-                                <h5 className="dpb color-yellow lt-sp">61123832</h5>
-                                <p className="dpib color-white mb-1 lt-sp">pannawit</p>
-                                <div className="dpib upload-btn f-r color-white" type="button">
-                                    <span className="spann">
-                                        fix
-                                    </span>
-                                </div> 
-                                <hr class="mt-2 mb-0"/>
-                            </div>
-                            <div className="mt-3">
-                                <h5 className="dpb color-yellow lt-sp">61123832</h5>
-                                <p className="dpib color-white mb-1 lt-sp">pannawit</p>
-                                <div className="dpib upload-btn f-r color-white" type="button">
-                                    <span className="spann">
-                                        fix
-                                    </span>
-                                </div>  
-                                <hr class="mt-2 mb-0"/>
-                            </div>
-                            <div className="mt-3">
-                                <h5 className="dpb color-yellow lt-sp">61123832</h5>
-                                <p className="dpib color-white mb-1 lt-sp">pannawit</p>
-                                <div className="dpib upload-btn f-r color-white" type="button">
-                                    <span className="spann">
-                                        fix
-                                    </span>
-                                </div> 
-                                <hr class="mt-2 mb-0"/>
-                            </div>
-                            <div className="mt-3">
-                                <h5 className="dpb color-yellow lt-sp">61123832</h5>
-                                <p className="dpib color-white mb-1 lt-sp">pannawit</p>
-                                <div className="dpib upload-btn f-r color-white" type="button">
-                                    <span className="spann">
-                                        fix
-                                    </span>
-                                </div> 
-                                <hr class="mt-2 mb-0"/>
-                            </div>
+                            
 
                             
                             
@@ -167,6 +69,7 @@ const Management = () => {
 
             
 
+        
 
         </div>
     )
