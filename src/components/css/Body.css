@@ -35,15 +35,16 @@
    input[type=text] {
     text-align: start;
     text-transform: lowercase;
+ 
     letter-spacing: 2px;
     border-radius: 25px;
    }
 
    input[type=password], input[type=email] {
-    text-align: center;
+    text-align: start;
     text-transform: lowercase;
     letter-spacing: 2px;
-    color: #14213D;
+ 
     border-radius: 25px;
 
    }
@@ -198,6 +199,12 @@
 
   }
 
+  .border-content-fixm {
+    border: 2px solid white;
+    border-radius: 15px; 
+    height: 82%;
+
+  }
   
   .border-content-s {
     border: 2px solid white;
@@ -288,6 +295,9 @@ td {
 .flex-height-fix {
 height: 360px;
 }
+.flex-height-fix-cus {
+  height: 335px;
+  }
 
 .wrap-fix {
   width: 50%;
@@ -309,4 +319,17 @@ a {
 
 .cLink {
   height:100px
+}
+
+input[type="file"] {
+  width: 70px;
+  
+}
+
+.custom-file-input::-webkit-file-upload-button {
+  visibility: hidden;
+}
+
+.custom-file-input::before {
+  content: 'FILE';
 }

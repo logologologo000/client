@@ -8,12 +8,20 @@ import MFixAdmin from '../admin/MFix.js'
 import CreateNo from '../admin/CreateNo.js'
 import FixReq from '../admin/FixReq.js'
 import EditNo from '../admin/EditNo.js'
+import { useHistory, useParams } from "react-router-dom";
 
-const refreshPage = ()=>{
-    window.location.reload();
- }
 
-function navbar() {
+
+function Navbar() {
+    let history = useHistory();
+    
+    const refreshPage = ()=>{
+
+        if (window.confirm("Do you want to SignOut ??") == true) {
+            history.push("/");
+            window.location.reload();
+        }
+    }
     return (
         <div className="container-fluid ">
 
@@ -54,7 +62,7 @@ function navbar() {
                         Management
                     </Link>
 
-                    <a onClick={refreshPage}
+                    <a type="button" onClick={refreshPage}
                         className="fixed-navright mx-4 my-2"
                     >
                         SignOut
@@ -83,4 +91,4 @@ function navbar() {
     )
 }
 
-export default navbar
+export default Navbar

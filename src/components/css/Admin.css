@@ -189,7 +189,7 @@
 
 .input-note:focus {
     -webkit-box-shadow: none;
-    text-align: center;
+    
     text-transform: lowercase;
     letter-spacing: 7px;
     color: #14213D;
@@ -260,16 +260,17 @@
     border: none;
     -webkit-box-shadow: none;
     text-transform: lowercase;
-    letter-spacing: 7px;
+    
     outline: none;
     color: white;
+    width: 250px;
 }
 
 .input-op:focus {
     -webkit-box-shadow: none;
-    text-align: center;
+    text-align: start;
     text-transform: lowercase;
-    letter-spacing: 7px;
+    
     color: #ffffff;
 }
 

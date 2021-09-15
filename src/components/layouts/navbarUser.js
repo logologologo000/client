@@ -7,15 +7,31 @@ import Signin from '../Signin.js'
 import CreateRequest from '../user/CreateReq'
 import EditRequest from '../user/EditReq'
 import Management from '../user/MFix'
+import { dbContext } from '../Signin'
+import { useContext } from 'react'
+import { useHistory, useParams } from "react-router-dom";
 
-const refreshPage = ()=>{
-    window.location.reload();
+
+
+
+
+function Navbar() {
+    let history = useHistory();
+    const db = useContext(dbContext)
+    console.log('123')
+
+    const refreshPage = ()=>{
+    
+    
+    if (window.confirm("Do you want to SignOut ??") == true) {
+        history.push("/");
+        window.location.reload();
+    }
+    
  }
-
-function navbar() {
     return (
         <div className="container-fluid ">
-
+           
             <nav className="navbar navbar-expand-lg mt-3  ">
             <div className="container-fluid">
             
@@ -45,7 +61,13 @@ function navbar() {
                         <a  disabled
                         className=" dpib mx-4 my-2 disable"
                     >
-                         Pannawit.Ch
+                         {
+                             db[0].firstname 
+                         }
+                        .
+                         {
+                             db[0].lastname.substring(2, 0)
+                         }
                     </a>
                     <Link to="/notice"
                         className="fixed-navright mx-4 my-2"
@@ -59,7 +81,7 @@ function navbar() {
                         Management
                     </Link>
 
-                    <a onClick={refreshPage}
+                    <a type="button" onClick={refreshPage}
                         className="fixed-navright mx-4 my-2"
                     >
                         SignOut
@@ -74,7 +96,7 @@ function navbar() {
             <Route path="/notice"><Notice /></Route>
             <Route path="/signin"><Signin /></Route>
             <Route path="/createreq"><CreateRequest /></Route>
-            <Route path="/fixreq"><EditRequest /></Route>
+            <Route path="/fixreq/:reqid"><EditRequest/></Route>
             <Route path="/management"><Management/></Route>
             
             <Route path="/:id">
@@ -88,4 +110,4 @@ function navbar() {
     )
 }
 
-export default navbar
+export default Navbar

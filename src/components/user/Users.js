@@ -1,8 +1,76 @@
 import React from 'react'
 import '../css/User.css'
+import { useState, useEffect } from 'react'
+import Axios from 'axios'
 import {Link, Route, Switch} from 'react-router-dom'
+import { useHistory } from "react-router-dom";
+import { dbContext } from '../Signin'
 
-function users() {
+import { useContext } from 'react'
+
+
+
+function Users() {
+    
+    const db = useContext(dbContext)
+    
+    let history = useHistory();
+    const [requests, setRequests] = useState([])
+    const [viewId, setViewId] = useState('')
+    
+
+    useEffect(() => {
+        
+        document.getElementById('idcol1').style.display = 'none'
+        console.log(
+          "This only happens ONCE.  But it happens AFTER the initial render."
+        );
+        try {
+
+                Axios.post('http://localhost:8000/getreqs', { 
+                    user_id : db[0].user_id
+                }).then((result) => {
+
+                    setRequests(result.data)  
+                    
+                    
+                })
+
+            } catch (err) {
+                console.error(err)
+            }
+        
+      }, []);
+    
+
+
+    const [request, setRequest] = useState([])
+    const [title, setTitle] = useState('')
+    const [detail, setDetail] = useState('')
+    const [notice, setNotice] = useState('')
+    const [img, setImg] = useState('')
+    
+    const  getDetail  = () => {
+        document.getElementById('idcol1').style.display = 'block'
+
+        Axios.post('http://localhost:8000/getreq', {
+                request_id : viewId
+            }).then((result) => {
+                console.log(result.data)
+                setRequest(result.data)  
+                setTitle(result.data.title)
+                setDetail(result.data.detail)
+                setImg(result.data.img)
+                
+            })
+        
+    }
+
+    
+    
+    
+    
+     
     return (
         <div className="container-fluid">
 
@@ -21,40 +89,66 @@ function users() {
                             {
                                 //loop here
                             }
-                            <div className="">
-                                <div>
-                                    <h6 className="color-yellow dpib f-l">404 Not Found</h6>
-                                    <div className="dpib f-r">
-                                        <div
+                            
+                            {
+                                requests.map((result, key) => {
+                                    return (
+                                        <div key={key} >
+                                            <div className="">
+                                                <div>
+                                                    <h6 className="color-yellow dpib f-l">{result.title}</h6>
+                                                    <div className="dpib f-r">
+                                                        <div
 
-                                            className="bt-class lt-sp "
+                                                            className="bt-class lt-sp "
 
-                                        >
-                                            <Link to="/fixreq"  className="">
-                                            <p className="pin ">fix</p>
-                                            </Link>
-                                        </div>
-                                        <div
-                                            data-bs-toggle="collapse" data-bs-target="#idcol1"
-                                            className="bt-class lt-sp "
+                                                        >
+                                                            
+                                                            <Link to={`/fixreq/${result.request_id}`}  >
+                                                            <p className="pin ">fix</p>
+                                                            </Link>
 
-                                        >
+                                                        </div>
+                                                        <div
+                                                            data-bs-toggle="" data-bs-target=""
+                                                            className="bt-class lt-sp "
+                                                            onMouseEnter={() => {
+                                                                setViewId(result.request_id)
+                                                            }}
+                                                            onClick={() => { 
+                                                               
+                                                               
+                                                               getDetail()
+
+                                                               
+                                                                
+                                                            }}
+                                                        >
+                                                            
+                                                            <p className="pin " type="button">view</p>
+                                                            
+                                                            
+                                                        </div>
+                                                        
+                                                        
+                                                        
+                                                    </div>
+
+
+                                                </div>
+                                                <br />
+                                                <br />
                                             
-                                            <p className="pin " type="button">view</p>
+                                                <hr />
+
+
+                                            </div>
+
                                             
                                         </div>
-                                    </div>
-
-
-                                </div>
-                                <br />
-                                <br />
-                               
-                                <hr />
-
-
-                            </div>
-
+                                    )
+                                })
+                            }
                             
 
 
@@ -69,20 +163,20 @@ function users() {
                 <div className="col-12 col-sm-12 col-md-8  m-auto my-4" >
                     <div className=" p-3  formmmm">
 
-                        <div class="py-1 detail-requ collapse" id="idcol1">
+                        <div class="py-1 detail-requ" id="idcol1">
 
-                            <h4 className="color-yellow lt-sp">Title</h4>
+                            <h4 className="color-yellow lt-sp">{title}</h4>
                             <div className="white-content p-3 mt-4" >
 
                                 <div className="dpib">
-                                    <img className="imgu" src="https://marcospernica.com/wp-content/themes/the-code-predator/img/default_thumbnail.jpg" />
+                                    <img className="imgu" src={`/uploads/${img}`} />
                                 </div>
                                 <div className="mx-3 dpib desc ">
                                     <h5 className="">
                                         Description
                                     </h5>
                                     <div className="desc-scroll">
-                                        <p className="desc-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit odio vel quae velit incidunt illum voluptatum iste architecto eum vitae.Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit odio vel quae velit incidunt illum voluptatum iste architecto eum vitae.Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit odio vel quae velit incidunt illum voluptatum iste architecto eum vitae.Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit odio vel quae velit incidunt illum voluptatum iste architecto eum vitae.</p>
+                                        <p className="desc-text">{detail}</p>
                                     </div>
 
                                 </div>
@@ -98,7 +192,7 @@ function users() {
                                     </h5>
                                 <div className="note-scroll">
 
-                                    <p >Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit odio vel quae velit incidunt illum voluptatum iste architecto eum vitae.Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit odio vel quae velit incidunt illum voluptatum iste architecto eum vitae.Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit odio vel quae velit incidunt illum voluptatum iste architecto eum vitae.Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit odio vel quae velit incidunt illum voluptatum iste architecto eum vitae.</p>
+                                    <p >{notice}</p>
                                 </div>
                             </div>
                         </div>
@@ -114,4 +208,4 @@ function users() {
     )
 }
 
-export default users
+export default Users

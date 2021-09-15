@@ -1,6 +1,6 @@
 import React from 'react'
-import Navbar from './layouts/navbar.js'
-import NavbarUser from './layouts/navbarUser.js'
+import Navbar from './layouts/Navbar.js'
+import NavbarUser from './layouts/NavbarUser.js'
 import Signin from './Signin.js'
 import Admin from './admin/Admin.js'
 import Register from './Register.js'
@@ -17,12 +17,10 @@ import {link, Router} from 'react-router-dom'
 import Axios from 'axios'
 import { useState } from 'react'
 import { useBetween } from 'use-between'
+import {Link, Route, Switch} from 'react-router-dom'
 
 
 function App() {
-
-
-  
 
 
 
@@ -33,12 +31,12 @@ function App() {
               
             
               
-            <Signin />
 
+            <Signin />
              {/*
+            <Register />
             <NavbarUser />
             <Navbar />
-            <Register />
             <Admin />
             <CreateNo />
             <EditNo />
@@ -52,7 +50,7 @@ function App() {
             <UserNoices />
             <MFixUser /> */}
 
-             
+         
             
             
           </div>
