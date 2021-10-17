@@ -101,10 +101,10 @@ const EditRequest = () => {
 
             Axios.delete(`http://localhost:8000/deletereq/${request_id}`)
             .then((result) => {
-               console.log(result)
-               history.push("/");
+               window.alert(result.data)
+               
             })
-            
+            history.push("/");
         }
    
         

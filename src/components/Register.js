@@ -159,7 +159,7 @@ function Register() {
                       <span>submit</span>
                     </button>
                   </div>
-                  <a type="button" onClick={backlogin} className="linker" >LOGIN</a>
+                  <a type="button" onClick={backlogin} className="linker" >BACK</a>
                 </center>
               </div>
 

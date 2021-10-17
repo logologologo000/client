@@ -9,12 +9,13 @@ import CreateNo from '../admin/CreateNo.js'
 import FixReq from '../admin/FixReq.js'
 import EditNo from '../admin/EditNo.js'
 import { useHistory, useParams } from "react-router-dom";
-
-
+import { dbContext } from '../Signin'
+import { useContext } from 'react'
 
 function Navbar() {
     let history = useHistory();
-    
+    const db = useContext(dbContext)
+    console.log(db)
     const refreshPage = ()=>{
 
         if (window.confirm("Do you want to SignOut ??") == true) {
@@ -54,7 +55,11 @@ function Navbar() {
                         <a  disabled
                         className=" dpib mx-4 my-2 disable"
                     >
-                         Pannawit.Ch
+                         {db[0].firstname}
+                         .
+                         {
+                             db[0].lastname.substring(2, 0)
+                         }
                     </a>
                     <Link to="/management"
                         className="fixed-navright mx-4 my-2"
@@ -76,10 +81,10 @@ function Navbar() {
             <Route exact path="/"><Admin /></Route>
             <Route path="/management"><Management /></Route>
             <Route path="/signin"><Signin /></Route>
-            <Route path="/fixmanagement"><MFixAdmin/></Route>
+            <Route path="/fixmanagement/:user_id"><MFixAdmin/></Route>
             <Route path="/createnotice"><CreateNo/></Route>
-            <Route path="/editnotice"><EditNo/></Route>
-            <Route path="/fixreq"><FixReq/></Route>
+            <Route path="/editnotice/:notice_id"><EditNo/></Route>
+            <Route path="/fixreq/:reqid"><FixReq/></Route>
             <Route path="/:id">
                 <h1>Undefined route</h1>
             </Route>

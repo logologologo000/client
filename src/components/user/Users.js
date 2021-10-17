@@ -56,12 +56,12 @@ function Users() {
         Axios.post('http://localhost:8000/getreq', {
                 request_id : viewId
             }).then((result) => {
-                console.log(result.data)
+                
                 setRequest(result.data)  
                 setTitle(result.data.title)
                 setDetail(result.data.detail)
                 setImg(result.data.img)
-                
+                setNotice(result.data.notice)
             })
         
     }
@@ -169,17 +169,22 @@ function Users() {
                             <div className="white-content p-3 mt-4" >
 
                                 <div className="dpib">
-                                    <img className="imgu" src={`/uploads/${img}`} />
+                                    <img className="imgu resize" src={`/uploads/${img}`} />
                                 </div>
                                 <div className="mx-3 dpib desc ">
-                                    <h5 className="">
-                                        Description
-                                    </h5>
-                                    <div className="desc-scroll">
-                                        <p className="desc-text">{detail}</p>
-                                    </div>
+                                        <h5 className="">
+                                            Description
+                                        </h5>
+                                        <div className="desc-scroll">
+                                            <p className="desc-text">
+                                                <div style={{
+                                                
+                                                }}>{detail}</div>
+                                            
+                                            </p>
+                                        </div>
 
-                                </div>
+                                    </div>
 
 
 

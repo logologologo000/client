@@ -46,15 +46,17 @@ const CreateRequest = () => {
                 
                 const { fileName, filePath } = res.data
                 setUploadedFile(fileName, filePath)
-                
+                window.alert('Create Success')
+                history.push("/");
             } catch (err) {
                 if (err) {
+                    window.alert(err.response.data.msg)
                     console.log(err.response.data.msg)
                 } else {
                     console.log(err.response.data.msg)
                 }
             }
-            history.push("/");
+            
 
     }
 

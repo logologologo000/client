@@ -52,10 +52,12 @@ const Signin = () => {
                 </dbContext.Provider>
             </div>
         )
-    } else if ( level === 1) {
+    } else if ( level === 1 || level === 2 ) {
         return (
             <div>
+                <dbContext.Provider value={data}>
                 <Navbar />
+                </dbContext.Provider>
             </div>
         )
     } else if ( registerbut == true) {
