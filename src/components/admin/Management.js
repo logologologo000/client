@@ -55,12 +55,17 @@ const Management = () => {
 
                             {
                                 filterSearchTA.map((result, key) => {
+
+                                                var xxx
+                                                if (result.firstname.length > 15) {
+                                                    xxx = "..."
+                                                }
                                     if (result.level == 1) {
                                         return (
 
                                             <div className="mt-3">
                                                 <h5 className="dpb color-yellow lt-sp">{result.code}</h5>
-                                                <p className="dpib color-white mb-1 lt-sp">{result.firstname}</p>
+                                                <p className="dpib color-white mb-1 lt-sp">{result.firstname.substring(15,0)}{xxx}</p>
                                                 <Link to={`/fixmanagement/${result.user_id}`} className="dpib upload-btn f-r color-white" type="button">
                                                     <span className="spann">
                                                         fix

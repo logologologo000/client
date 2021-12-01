@@ -4,7 +4,7 @@
    }
 
    span {
-    letter-spacing: 10px;
+    letter-spacing: 7px;
     word-spacing: 4px;
     
     
@@ -75,7 +75,7 @@
     label {
     color: white;
     line-height: 1.65;
-    letter-spacing: 10px;
+    letter-spacing: 5px;
     word-spacing: 4px;
     text-align: left;
     text-transform: lowercase;
@@ -97,9 +97,9 @@
    }
    .btn-yellow:hover {
     border-radius: 25px;
-    border:2px solid rgb(255, 255, 255);
+    border:2px solid FCA311;
     background-color: #fca21100;
-    color:#ffffff;
+    color:#FCA311;
     font-weight: initial;
 
     height : 40px;
@@ -109,25 +109,34 @@
     
     /* cutton-white */
       
-    .bt-class {
-      color: white;
-      border: 2px solid white;
+    .bt-class :hover  {
+      color: rgb(0, 0, 0);
+      
+    }
+
+    .bt-class{
+      color: #14213D;
+      
+      background-color: #fff;
       border-radius:30px;
-      width: 90px;
-      height:20px;
+      width: 70px;
+      height:25px;
       display: inline-block;
       text-align: center;
     }
 
-    .bt-class:hover {
-      color: #14213D;
-      border: 2px solid #14213D;
-      background-color: #fff;
+    .bt-class-fix :hover  {
+      color: rgb(255, 255, 255);
+      
+    }
+
+    .bt-class-fix{
+      color: #ffffff;
+      background-color: #fca211b0;
       border-radius:30px;
-      width: 90px;
-      height:20px;
+      width: 70px;
+      height: auto;
       display: inline-block;
-      text-align: center;
     }
 
     .pin {
@@ -285,10 +294,14 @@ td {
 }
 
 .flex-container {
+  display: flex; 
   flex-direction: row;
   flex-wrap: wrap;
-  align-items: flex-start;
+  align-items: center;
+  justify-content: center;
   clear: both;
+  
+ 
   
 }
 
@@ -335,7 +348,7 @@ input[type="file"] {
 }
 
 .resize:hover {
-  transform: scale(4) translate(0px, 35px);
+  transform: scale(2) translate(0px, 35px);
   position: relative !important;
   transition: .6s ease;
   transition-delay: .3s;

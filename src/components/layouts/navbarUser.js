@@ -10,6 +10,9 @@ import Management from '../user/MFix'
 import { dbContext } from '../Signin'
 import { useContext } from 'react'
 import { useHistory, useParams } from "react-router-dom";
+import { MdManageAccounts } from 'react-icons/md';
+import { GoSignOut } from 'react-icons/go';
+import { TiDocumentText } from 'react-icons/ti';
 
 
 
@@ -70,21 +73,21 @@ function Navbar() {
                          }
                     </a>
                     <Link to="/notice"
-                        className="fixed-navright mx-4 my-2"
+                        className="fixed-navright mx-4 my-0"
                     >
-                        Notice
+                        <h3 className="my-0"> < TiDocumentText /> </h3>
                     </Link>
 
                     <Link to="/management"
-                        className="fixed-navright mx-4 my-2"
+                        className="fixed-navright mx-4 my-0"
                     >
-                        Management
+                        <h3 className="my-0"> < MdManageAccounts /> </h3>
                     </Link>
 
                     <a type="button" onClick={refreshPage}
-                        className="fixed-navright mx-4 my-2"
+                        className="fixed-navright mx-4 my-0 mt-1"
                     >
-                        SignOut
+                       <h4   className="my-0"> < GoSignOut /> </h4>
                     </a>
                          </div>
                     </div>

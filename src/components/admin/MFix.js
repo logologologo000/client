@@ -5,6 +5,10 @@ import Axios from 'axios'
 import { Link, Route, Switch } from 'react-router-dom'
 import { useHistory, useParams } from "react-router-dom";
 import { dbContext } from '../Signin'
+import { RiDeleteBin5Fill } from 'react-icons/ri';
+import { TiArrowLeftThick } from 'react-icons/ti';
+import { TiArrowRightThick } from 'react-icons/ti';
+
 
 const MFixed = () => {
     const history = useHistory()
@@ -143,7 +147,7 @@ const MFixed = () => {
                 <div className="my-2">
                     <h6 className="color-yellow lt-sp dpib mx-3" >{code}</h6>
                     <div onClick={deleteUser} type="button" className="dpib f-r delete-btn">
-                        <span className="">delete</span>
+                        <span className="">< RiDeleteBin5Fill /></span>
                     </div>
                     <div onClick={setSetTa} type="button" className={css}>
                         <span className="">TA</span>
@@ -243,7 +247,7 @@ const MFixed = () => {
                             history.push("/management");
                         }}
                         type="button" type="button" className="direct-btn f-l">
-                        <span className="spann">back</span>
+                        <h5 className="my-0 pb-1">< TiArrowLeftThick /></h5>
                     </div>
                     <div type="button" className="direct-btn f-r"
                         onClick={() => {
@@ -253,8 +257,8 @@ const MFixed = () => {
                                 sendServer()
                             }
                         }}
-                    >
-                        <span className="spann">confirm</span>
+                    ><h5 className="my-0 pb-1">< TiArrowRightThick /></h5>
+                        
                     </div>
                 </div>
 

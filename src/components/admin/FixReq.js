@@ -5,6 +5,9 @@ import {Link, Route, Switch} from 'react-router-dom'
 import { useHistory, useParams } from "react-router-dom";
 import { dbContext } from '../Signin'
 import { useContext } from 'react'
+import { TiArrowLeftThick } from 'react-icons/ti';
+import { TiArrowRightThick } from 'react-icons/ti';
+
 
 const FixReq = () => {
 
@@ -31,7 +34,7 @@ const FixReq = () => {
     
     return (
         <div>
-            <div className="container-fluid formmmmre mt-4 p-3 text-start col-10  col-lg-6">
+            <div className="container-fluid formmmmre my-4 p-3 text-start col-10  col-lg-6">
                 <h4 className="color-white lt-sp dpib">{request.title}</h4>
                 <div type="button"  className="direct-btn f-r mt-2">
                     <span  className="spann">entry</span>
@@ -70,7 +73,7 @@ const FixReq = () => {
                                 
                             }}
                         type="button" className="direct-btn f-l">
-                            <span  className="spann">back</span>
+                            <h5 className="my-0 pb-1">< TiArrowLeftThick /></h5>
                         </div>
 
                         <div onClick={() => { 
@@ -79,7 +82,7 @@ const FixReq = () => {
                                 }
                                 
                             }} type="button"  className="direct-btn f-r">
-                            <span     className="spann">accept</span>
+                            <h5 className="my-0 pb-1">< TiArrowRightThick /></h5>
                         </div>
                 </div>
                 <br />

@@ -7,8 +7,8 @@ import { useHistory } from "react-router-dom";
 import { dbContext } from '../Signin'
 
 import { useContext } from 'react'
-
-
+import { RiEdit2Fill } from 'react-icons/ri';
+import { AiFillEye } from 'react-icons/ai';
 
 function Users() {
     
@@ -92,26 +92,33 @@ function Users() {
                             
                             {
                                 requests.map((result, key) => {
+
+                                    var xxx
+                                                if (result.title.length >= 20) {
+                                                    xxx = "..."
+                                                }
                                     return (
                                         <div key={key} >
                                             <div className="">
                                                 <div>
-                                                    <h6 className="color-yellow dpib f-l">{result.title}</h6>
-                                                    <div className="dpib f-r">
+                                                    <h6 className="color-yellow d-block">{result.title.substring(20,0)}{xxx}</h6>
+                                                    <div className="d-block">
                                                         <div
 
-                                                            className="bt-class lt-sp "
+                                                            className="bt-class-fix lt-sp my-2 mx-2 "
 
                                                         >
                                                             
                                                             <Link to={`/fixreq/${result.request_id}`}  >
-                                                            <p className="pin ">fix</p>
+                                                            <h4 >< RiEdit2Fill /></h4>
                                                             </Link>
 
                                                         </div>
+                                                        
                                                         <div
+                                                            type="button"
                                                             data-bs-toggle="" data-bs-target=""
-                                                            className="bt-class lt-sp "
+                                                            className="bt-class-fix lt-sp "
                                                             onMouseEnter={() => {
                                                                 setViewId(result.request_id)
                                                             }}
@@ -125,7 +132,7 @@ function Users() {
                                                             }}
                                                         >
                                                             
-                                                            <p className="pin " type="button">view</p>
+                                                            <h4 className="">< AiFillEye /></h4>
                                                             
                                                             
                                                         </div>
@@ -136,8 +143,7 @@ function Users() {
 
 
                                                 </div>
-                                                <br />
-                                                <br />
+                                                
                                             
                                                 <hr />
 

@@ -4,7 +4,7 @@ import { Link, Route, Switch } from 'react-router-dom'
 import { useHistory } from "react-router-dom";
 import { dbContext } from '../Signin'
 import '../css/User.css'
-
+import { AiFillEye } from 'react-icons/ai';
 
 const Notice = () => {
     const history = useHistory()
@@ -49,12 +49,16 @@ const Notice = () => {
 
                                 {
                                     notice.map((res, key) => {
+                                        var xxx
+                                                if (res.title.length >= 20) {
+                                                    xxx = "..."
+                                                }
                                         return (
                                             <div key={key}>
                                                 <div className="">
                                                     <div>
-                                                        <h6 className="color-yellow dpib f-l">{res.title}</h6>
-                                                        <div className="dpib f-r">
+                                                        <h6 className="color-yellow d-block ">{res.title.substring(20,0)}{xxx}</h6>
+                                                        <div className="d-block my-3 ">
 
                                                             <div
                                                                 type="button"
@@ -62,17 +66,15 @@ const Notice = () => {
                                                                     
                                                                     View(key)
                                                                 }}
-                                                                className="bt-class lt-sp "
+                                                                className="bt-class-fix lt-sp "
 
                                                             >
-                                                                <p className="pin">view</p>
+                                                               <h4 className="">< AiFillEye /></h4>
                                                             </div>
                                                         </div>
 
 
                                                     </div>
-                                                    <br />
-                                                    <br />
 
                                                     <hr />
 

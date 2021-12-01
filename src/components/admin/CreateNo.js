@@ -5,6 +5,8 @@ import {Link, Route, Switch} from 'react-router-dom'
 import { useHistory, useParams } from "react-router-dom";
 import { dbContext } from '../Signin'
 import { useContext } from 'react'
+import { TiArrowRightThick } from 'react-icons/ti';
+import { TiArrowLeftThick } from 'react-icons/ti';
 
 const CreateNo = () => {
     const history = useHistory()
@@ -80,15 +82,19 @@ const CreateNo = () => {
                             setDetail(e.target.value)
                         }}  
                         className="d-block input-note-area my-3"></textarea>
-                        <hr class="mt-2 mb-0" />
+                        
                     </div>
                    
                     <div className="d-block mt-2 px-3">
-                        <div type="button" className="direct-btn f-l">
-                            <span className="spann">back</span>
+                        <div type="button" className="direct-btn f-l"
+                        onClick={() =>{
+                            history.push("/")
+                        }}
+                        >
+                           <h5 className="my-0 pb-1">< TiArrowLeftThick /></h5>
                         </div>
                         <div type="button" onClick={onSubmit}   className="direct-btn f-r">
-                            <span  className="spann">accept</span>
+                        <h5 className="my-0 pb-1">< TiArrowRightThick /></h5>
                         </div>
                     </div>
                    

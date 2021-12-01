@@ -4,6 +4,10 @@ import Axios from 'axios'
 import { Link, Route, Switch } from 'react-router-dom'
 import { useHistory, useParams } from "react-router-dom";
 import { dbContext } from '../Signin'
+import { TiArrowRightThick } from 'react-icons/ti';
+import { TiArrowLeftThick } from 'react-icons/ti';
+import { RiDeleteBin5Fill } from 'react-icons/ri';
+
 
 const EditNo = () => {
 
@@ -101,7 +105,7 @@ const EditNo = () => {
                         deleteNotice()
                     }}
                     className="delete-btn dpib f-r">
-                    <span>delete</span>
+                    <span className="">< RiDeleteBin5Fill /></span>
                 </div>
                 <div className="border-content mt-3 p-3">
                     <div className="p-3">
@@ -152,10 +156,10 @@ const EditNo = () => {
                         <div onClick={() => {
                             history.push("/");
                         }} type="button" className="direct-btn f-l">
-                            <span className="spann">back</span>
+                            <h5 className="my-0 pb-1">< TiArrowLeftThick /></h5>
                         </div>
                         <div onClick={onSubmit} type="button" className="direct-btn f-r">
-                            <span className="spann">accept</span>
+                        <h5 className="my-0 pb-1">< TiArrowRightThick /></h5>
                         </div>
                     </div>
 

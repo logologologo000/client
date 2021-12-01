@@ -200,6 +200,13 @@
     height: 100px;
 }
 
+.input-note-area-100 {
+    outline: none;
+    border: none;
+    width: 100%;
+    height: 100%;
+}
+
 .cus-up {
     display: block;
     text-align: end;

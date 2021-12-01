@@ -8,6 +8,7 @@ import Navbar from './layouts/Navbar.js'
 import NavbarUser from './layouts/NavbarUser.js'
 import Register from './Register.js'
 import {Link, Route, Switch} from 'react-router-dom'
+import { GoSignIn } from 'react-icons/go';
 
 export const dbContext = React.createContext()
 
@@ -31,7 +32,10 @@ const Signin = () => {
             setData(result.data)
             setLevel(result.data[0].level)
             
-        }).catch((err) => {console.log(err)})
+        }).catch((err) => {
+            alert("Invalid username or password")
+        }
+        )
      
     }
 
@@ -41,7 +45,20 @@ const Signin = () => {
     }
     
 
+    ////// enter //////////////////////////////////
 
+     
+
+    const handleKeypress = (e) => {
+        
+        var x = e.keyCode
+        
+      if (x == 13) {
+        login();
+        
+      }
+      
+    };
     
     
     if (level === 0) {
@@ -97,14 +114,16 @@ const Signin = () => {
                                     <input className="form-control input-r" type="password" name="password"
                                     onChange={ (e) => {
                                         setPassword(e.target.value)
-                                    }} />
+                                    }}
+                                    onKeyDown={handleKeypress}
+                                    />
                                 </div>
     
                                 <hr />
                                 <center>
                                     <div className="mt-5 " >
-                                        <button type='button'  onClick={login} className="btn-yellow  ">
-                                             <span>LOGIN</span>
+                                        <button type='button'   onClick={login} className="btn-yellow  ">
+                                             <span className='login-span'>login </span>
                                         </button>
                                     </div> 
                                   <div className="mt-1" >
