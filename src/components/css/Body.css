@@ -172,8 +172,20 @@
 
   .formmmmre {
     border-radius: 20px;
+
     box-shadow: 4px 4px 4px #FCA311;
     background-color: #14213D;
+    width: 400px;
+    height: auto;
+   
+  }
+
+  .formmmmrex {
+    border-radius: 20px;
+
+    box-shadow: 4px 4px 4px #FCA311;
+    background-color: #14213D;
+    
     height: auto;
    
   }

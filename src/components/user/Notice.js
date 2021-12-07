@@ -98,7 +98,7 @@ const Notice = () => {
                         //  Detail
                     }
                     <div className="col-12 col-sm-12 col-md-8  m-auto my-4" >
-                        <div className=" p-3  formmmmre">
+                        <div className=" p-3  formmmmrex">
 
                             <div class="py-1 detail-requ" id="idcol1">
 

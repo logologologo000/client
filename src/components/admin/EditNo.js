@@ -103,8 +103,10 @@ const EditNo = () => {
                     type="button"
                     onClick={() => {
                         deleteNotice()
+                        history.push("/")
                     }}
                     className="delete-btn dpib f-r">
+                        
                     <span className="">< RiDeleteBin5Fill /></span>
                 </div>
                 <div className="border-content mt-3 p-3">

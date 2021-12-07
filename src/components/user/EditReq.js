@@ -104,7 +104,11 @@ const EditRequest = () => {
                window.alert(result.data)
                
             })
-            history.push("/");
+            const timer = setTimeout(() => {
+                history.push("/");
+            }, 1000);
+            //window.alert("return to main")
+            
         }
    
         

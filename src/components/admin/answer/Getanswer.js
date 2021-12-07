@@ -3,13 +3,12 @@ import { useState, useEffect } from 'react'
 import Axios from 'axios'
 import { Link, Route, Switch } from 'react-router-dom'
 import { useHistory, useParams } from "react-router-dom";
-import { RiSave2Fill } from 'react-icons/ri';
-import Createanswer from './answer/Createanswer';
-import Editanswer from './answer/Editanswer';
+import { FaPaste } from 'react-icons/fa';
+
 import ReactDOM from "react-dom";
 
 
-const Answer = () => {
+const Getanswer = ({setAnswerNo}) => {
     const [answers, setAnswers] = useState([])
     
     
@@ -68,18 +67,17 @@ const Answer = () => {
 
     
     
-    console.log(fixid)
+   
     return (
         
-            <div className="container-fluid flex-container">
+            <div className="">
                 
-                {   switches == 0 ? < Createanswer  RefreshData={RefreshData} /> : < Editanswer RefreshData={RefreshData} fixid={fixid} setSwitches={setSwitches} /> }
                 
-                <div className=" my-4 dpib mx-2">
-                    <div className="formmmm-fix p-3 text-start">
-                        <h4 className="color-yellow mt-2 dpib lt-sp">ANSWER LIST</h4>
-                        <input onChange={searchFuncAns}  type="text" className="f-r my-2 input-note" placeholder="input ..."/>
-                        <div className="border-content mt-1 p-2 ">
+                <div  className=" my-4 dpib " >
+                    <div style={{width: 300, height: 'auto'}} className="formmmm-fix p-3 text-start">
+                        <p className="color-yellow mt-2 dpib lt-sp">ANSWER LIST</p>
+                        <input onChange={searchFuncAns}  type="text" className="my-0 input-note" placeholder="input ..."/>
+                        <div className="border-content mt-3 p-2 ">
                             <div className="text-start manage-scroll px-2 ">
 
                                 {
@@ -88,24 +86,22 @@ const Answer = () => {
                                 {
                                  filterSearchAns.map((result, key) => {
                                             var xxx
-                                                if (result.answer_title.length > 15) {
+                                                if (result.answer_title.length > 13) {
                                                     xxx = "..."
                                                 }
                                         return (
 
                                             <div className="mt-3" key={key}>
-                                                <h5 className="dpib color-yellow lt-sp">{result.answer_title.substring(20,0)}{xxx}</h5>
+                                                <h6 className="dpib color-yellow lt-sp">{result.answer_title.substring(13,0)}{xxx}</h6>
                                                 
                                                 <div 
                                                 onClick={() => {
                                                     
-                                                    setFixId(result.answer_id)
-                                                    setSwitches(1)
+                                                    setAnswerNo(result.answer_detail)
+                                                    console.log(result.answer_detail)
                                                 }}
                                                 className="dpib upload-btn f-r color-white" type="button">
-                                                    <span className="spann">
-                                                        fix
-                                                    </span>
+                                                    < FaPaste />
                                                 </div> 
                                                 
                                                 <hr className="mt-2 mb-0"/>
@@ -134,4 +130,4 @@ const Answer = () => {
 
 }
 
-export default Answer
+export default Getanswer

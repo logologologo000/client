@@ -16,6 +16,7 @@ import { MdManageAccounts } from 'react-icons/md';
 import { GoSignOut } from 'react-icons/go';
 import { TiDocumentText } from 'react-icons/ti';
 import { IoIosList } from 'react-icons/io';
+import { FaBook } from 'react-icons/fa';
 
 
 function Navbar() {
@@ -62,14 +63,19 @@ function Navbar() {
                              db[0].lastname.substring(2, 0)
                          }
                     </a>
-
+                    
+                    <Link to="/managementans"
+                        className="fixed-navright mx-4 my-0"
+                    >
+                         <h5 className="mt-1"> < FaBook /> </h5>
+                    </Link>
                     
                     <Link to="/managementans"
                         className="fixed-navright mx-4 my-0"
                     >
                          <h3 className="my-0"> < TiDocumentText /> </h3>
                     </Link>
-
+                    
 
                     <Link to="/management"
                         className="fixed-navright mx-4 my-0"
