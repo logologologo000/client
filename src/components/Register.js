@@ -1,10 +1,21 @@
 import React from 'react'
 import './css/Register.css'
 import Signin from './Signin.js'
-import { useState } from 'react'
+import { useState , useEffect} from 'react'
 import Axios from 'axios'
 
 function Register() {
+
+
+  const [subjects , setSubjects] = useState ([])
+
+  useEffect(() => {
+    Axios.get('http://localhost:8000/subjects').then((response) => {
+      setSubjects(response.data)
+      console.log(response.data)
+    })
+    
+  }, [])
 
   const [registerbut, setRegisterbut] = useState(false)
   const backlogin = () => {
@@ -55,7 +66,7 @@ function Register() {
       <div className="container-fluid my-5 p-2">
         <div className="row">
 
-          <div className="col-11 col-lg-7 col-md-9 m-auto formmmmre " >
+          <div className="col-11 col-lg-7 col-md-9 m-auto formmmmregis " >
             <form  className="p-5" >
               <h3 className="color-yellow lt-sp">STUDENT REGISTRATION</h3>
               <hr />
@@ -131,16 +142,35 @@ function Register() {
                   <div className="mt-3">
                     <label className="mx-3 " htmlFor="lastname">subject</label>
 
+
+                  
                     <select
                     onChange={(e) => { 
                       setSubject(e.target.value)
                     }}
                     className="form-select" aria-label="Default select example">
-                      <option defaultValue>select section</option>
+                      
+                      <option defaultValue >select section</option>
+                  {
+                    subjects.map((result, key) => {
+                      
+                      return (
+                        
+                        <option key={key}  value={result.subject_code}>{result.subject_code}</option>
+                        
+                      )
+                    
+
+                    })
+                  }
+                        
+                      {/* 
+                      <option defaultValue >select section</option>
                       <option value="COM 1404 sec 2">COM 1404 sec 2</option>
                       <option value="COM 2540 sec 1">COM 2540 sec 1</option>
-                      <option value="COM 3303 sec 11">COM 3303 sec 11</option>
+                      <option value="COM 3303 sec 11">COM 3303 sec 11</option> */}
                     </select>
+                    
                   </div>
                   <br />
                 </div>

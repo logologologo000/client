@@ -4,22 +4,22 @@ import Axios from 'axios'
 import { Link, Route, Switch } from 'react-router-dom'
 import { useHistory, useParams } from "react-router-dom";
 import { RiSave2Fill } from 'react-icons/ri';
-import Createanswer from './answer/Createanswer';
-import Editanswer from './answer/Editanswer';
+import Createsubject from './subject/Createsubject';
+import Editsubject from './subject/Editsubject';
 import ReactDOM from "react-dom";
 
 
-const Answer = () => {
-    const [answers, setAnswers] = useState([])
-    
+const Subject = () => {
+    const [subjects, setSubjects] = useState([])
     
     const [fixid , setFixId] = useState("")
 
     const [switches , setSwitches] = useState(0)
+    
 
     useEffect(() => {
-        Axios.get('http://localhost:8000/getallans').then((response) => {
-            setAnswers(response.data)
+        Axios.get('http://localhost:8000/subjects').then((response) => {
+            setSubjects(response.data)
             // setFilterSearchTA(response.data)
             setFilterSearchAns(response.data)
         })
@@ -27,8 +27,8 @@ const Answer = () => {
     }, [])
     
     const RefreshData = () => {
-        Axios.get('http://localhost:8000/getallans').then((response) => {
-            setAnswers(response.data)
+        Axios.get('http://localhost:8000/subjects').then((response) => {
+            setSubjects(response.data)
             // setFilterSearchTA(response.data)
             setFilterSearchAns(response.data)
         })
@@ -54,9 +54,9 @@ const Answer = () => {
     const searchFuncAns = async (e) => {
         
         const wording = e.target.value
-        const newFilter = answers.filter((value) => {
+        const newFilter = subjects.filter((value) => {
             
-            return value.answer_title.toLowerCase().includes(wording.toLowerCase())
+            return value.subject_code.toLowerCase().includes(wording.toLowerCase())
         })
         setFilterSearchAns(newFilter)
         
@@ -72,12 +72,11 @@ const Answer = () => {
     return (
         
             <div className="container-fluid flex-container">
-                
-                {   switches == 0 ? < Createanswer  RefreshData={RefreshData} /> : < Editanswer RefreshData={RefreshData} fixid={fixid} setSwitches={setSwitches} /> }
+                {   switches == 0 ? < Createsubject  RefreshData={RefreshData} /> : < Editsubject RefreshData={RefreshData} fixid={fixid} setSwitches={setSwitches} /> }
                 
                 <div className=" my-4 dpib mx-2">
                     <div className="formmmm-fix p-3 text-start">
-                        <h4 className="color-yellow mt-2 dpib lt-sp">ANSWER LIST</h4>
+                        <h4 className="color-yellow mt-2 dpib lt-sp">SUBJECT LIST</h4>
                         <input onChange={searchFuncAns}  type="text" className="f-r my-2 input-note" placeholder="input ..."/>
                         <div className="border-content mt-1 p-2 ">
                             <div className="text-start manage-scroll px-2 ">
@@ -88,19 +87,19 @@ const Answer = () => {
                                 {
                                  filterSearchAns.map((result, key) => {
                                             var xxx
-                                                if (result.answer_title.length > 15) {
+                                                if (result.subject_code.length > 15) {
                                                     xxx = "..."
                                                 }
                                         return (
 
                                             <div className="mt-3" key={key}>
-                                                <h5 className="dpib color-yellow lt-sp">{result.answer_title.substring(20,0)}{xxx}</h5>
+                                                <h5 className="dpib color-yellow lt-sp">{result.subject_code.substring(20,0)}{xxx}</h5>
                                                 
                                                 <div 
                                                 onClick={() => {
-                                                    
-                                                    setFixId(result.answer_id)
                                                     setSwitches(1)
+                                                    setFixId(result.subject_id)
+                                                    
                                                 }}
                                                 className="dpib upload-btn f-r color-white" type="button">
                                                     <span className="spann">
@@ -116,11 +115,18 @@ const Answer = () => {
                                         
                                     })
                                 }
+                                
+
+                            
+                            
+                            
+
 
                             </div>
                         </div>
                     </div>
                 </div> 
+
             </div>
         
     )
@@ -128,4 +134,4 @@ const Answer = () => {
 
 }
 
-export default Answer
+export default Subject

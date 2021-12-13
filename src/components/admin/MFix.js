@@ -26,6 +26,9 @@ const MFixed = () => {
     const [level, setLevel] = useState('')
     const [css, setCss] = useState('')
 
+    const [subjects , setSubjects] = useState ([])
+
+
     useEffect(() => {
         Axios.get(`http://localhost:8000/getuser/${user_id}`).then((result) => {
             setUser(result.data[0])
@@ -37,13 +40,18 @@ const MFixed = () => {
             setSubject(result.data[0].subject)
             setOld_username(result.data[0].username)
             setOld_email(result.data[0].email)
-            setOld_code(result.data[0].email)
+            setOld_code(result.data[0].code)
             setLevel(result.data[0].level)
             if (result.data[0].level == 0) {
                 setCss('dpib f-r ta-disable-btn mx-2')
             } else {
                 setCss('dpib f-r ta-active-btn mx-2')
             }
+        })
+
+        Axios.get('http://localhost:8000/subjects').then((response) => {
+         setSubjects(response.data)
+         console.log(response.data)
         })
 
         
@@ -60,7 +68,7 @@ const MFixed = () => {
             setSubject(result.data[0].subject)
             setOld_username(result.data[0].username)
             setOld_email(result.data[0].email)
-            setOld_code(result.data[0].email)
+            setOld_code(result.data[0].old_code)
             setLevel(result.data[0].level)
             
         })
@@ -81,9 +89,10 @@ const MFixed = () => {
         })
             .then((response) => {
                 
-                window.alert(`${response.data}, Signin for come back to this page !!!`)
+                window.alert(`${response.data}`)
                 // history.push("/");
-                window.location.reload();
+                //window.location.reload();
+                setTimeout(refresh(), 5000)
                 
             })
     }
@@ -228,10 +237,22 @@ const MFixed = () => {
                                 setSubject(e.target.value)
                             }}
                             className=" dpib mx-5" aria-label="Default select example">
-                            <option defaultValue value={username}  >{subject}</option>
-                            <option value="COM 1404 sec 2">COM 1404 sec 2</option>
-                            <option value="COM 2540 sec 1">COM 2540 sec 1</option>
-                            <option value="COM 3303 sec 11">COM 3303 sec 11</option>
+                            <option defaultValue value={subject}  >{subject}</option>
+                            {
+                                subjects.map((result, key) => {
+                                
+                                return (
+
+                                    
+                                     subject != result.subject_code ? <option key={key}  value={result.subject_code}>{result.subject_code}</option> : <div>defualt</div>
+                                    
+                                   
+                                    
+                                )
+                                
+
+                                })
+                            }
                         </select>
 
                     </div>
@@ -252,7 +273,7 @@ const MFixed = () => {
                     <div type="button" className="direct-btn f-r"
                         onClick={() => {
                             if (window.confirm(
-                                `You need to Login again for refresh cookies                                           Are you sure you want to edit`
+                                `Are you sure you want to edit`
                             )) {
                                 sendServer()
                             }

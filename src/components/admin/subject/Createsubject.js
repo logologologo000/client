@@ -7,15 +7,15 @@ import { RiSave2Fill } from "react-icons/ri";
 import { MdLibraryAdd } from "react-icons/md";
 import Answer from "../Answer";
 
-const Createanswer = ({ RefreshData }) => {
-  const [detail, setDetail] = useState("");
-  const [title, setTitle] = useState("");
+const Createsubject = ({ RefreshData }) => {
+  const [code, setCode] = useState("");
+  const [name, setName] = useState("");
 
   const SaveAns = () => {
     try {
-      Axios.post("http://localhost:8000/createans", {
-        detail: detail,
-        title: title,
+      Axios.post("http://localhost:8000/createsub", {
+        subject_code: code,
+        subject_name: name,
       }).then((result) => {
         if (result.status != 200) {
           alert(result.data);
@@ -25,35 +25,37 @@ const Createanswer = ({ RefreshData }) => {
       });
     } catch (err) {}
 
-    setTitle("");
-    setDetail("");
+    setCode("");
+    setName("");
   };
 
   return (
     <div>
       <div className=" my-4 dpib mx-2">
         <div className="formmmm-fix p-3">
-          <h4 className="color-yellow m-2 dpib lt-sp ">CREATE ANSWER</h4>
+          <h4 className="color-yellow m-2 dpib lt-sp ">CREATE SUBJECT</h4>
           <h4 className="color-white dpib">
             <MdLibraryAdd />
           </h4>
           <div className="p-3 mb-5" style={{ height: 270 }}>
-            <label className="d-block">title</label>
+            <label className="d-block">subject code</label>
             <input
+              style={{ width:440}}
               type="text"
               className="input-note d-block my-2"
               onChange={(e) => {
-                setTitle(e.target.value);
+                setCode(e.target.value);
               }}
-              value={title}
+              value={code}
             />
-            <label className="d-block">description</label>
+            <label className="d-block mt-5">subject name</label>
             <textarea
+              style={{height:200}}
               onChange={(e) => {
-                setDetail(e.target.value);
+                setName(e.target.value);
               }}
-              value={detail}
-              className="d-block input-note-area-100 my-3"
+              value={name}
+              className="d-block input-note-area-100 mt-2"
             ></textarea>
           </div>
           <div className="d-block text-center pt-3">
@@ -64,7 +66,7 @@ const Createanswer = ({ RefreshData }) => {
                 if (
                   window.confirm(
                     `Are you sure you want to create`
-                    )
+                  )
                 ) {
                   SaveAns();
                   RefreshData();
@@ -82,4 +84,4 @@ const Createanswer = ({ RefreshData }) => {
   );
 };
 
-export default memo(Createanswer);
+export default memo(Createsubject);

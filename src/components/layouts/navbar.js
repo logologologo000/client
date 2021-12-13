@@ -4,6 +4,7 @@ import {Link, Route, Switch} from 'react-router-dom'
 import Admin from '../admin/Admin.js'
 import Answer from '../admin/Answer.js'
 import Management from '../admin/Management.js'
+import Subject from '../admin/Subject'
 import Signin from '../Signin.js'
 import MFixAdmin from '../admin/MFix.js'
 import CreateNo from '../admin/CreateNo.js'
@@ -64,7 +65,7 @@ function Navbar() {
                          }
                     </a>
                     
-                    <Link to="/managementans"
+                    <Link to="/subject"
                         className="fixed-navright mx-4 my-0"
                     >
                          <h5 className="mt-1"> < FaBook /> </h5>
@@ -101,6 +102,7 @@ function Navbar() {
         <Switch>
             <Route exact path="/"><Admin /></Route>
             <Route path="/management"><Management /></Route>
+            <Route path="/subject"><Subject /></Route>
             <Route path="/managementans"><Answer /></Route>
             <Route path="/signin"><Signin /></Route>
             <Route path="/fixmanagement/:user_id"><MFixAdmin/></Route>

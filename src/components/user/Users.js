@@ -105,7 +105,7 @@ function Users() {
                     <div className="">
                       <div>
                         <h6 className="color-yellow d-block">
-                          {result.status == 0 ? <p type="buttom" className="dot-red "></p> : (result.status == 1 ? <p type="buttom" className="dot-yellow m-auto"></p> : <p type="buttom" className="dot-green "></p>) }
+                          {result.status == 0 ? <p type="buttom" className="dot-red "></p> : (result.status == 1 ? <p type="buttom" className="dot-yellow"></p> : <p type="buttom" className="dot-green "></p>) }
                            {result.title.substring(20, 0)}
                           {xxx}
                         </h6>

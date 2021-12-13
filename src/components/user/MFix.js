@@ -7,22 +7,48 @@ import { dbContext } from '../Signin'
 
 const MFixed = () => {
 
+    const [subjects , setSubjects] = useState ([])
+
+  
+
     const [current, setCurrent] = useState([]) // cuurent DAta
     let history = useHistory();
     const db = useContext(dbContext)
-    const [username, setUsername] = useState(db[0].username)
+    const [username, setUsername] = useState('')
     const [password, setPassword] = useState("")
-    const [firstname, setFirstname] = useState(db[0].firstname)
-    const [lastname, setLastname] = useState(db[0].lastname)
-    const [email, setEmail] = useState(db[0].email)
-    const [subject, setSubject] = useState(db[0].subject)
-    const [code, setCode] = useState(db[0].code)
+    const [firstname, setFirstname] = useState("")
+    const [lastname, setLastname] = useState("")
+    const [email, setEmail] = useState("")
+    const [subject, setSubject] = useState("")
+    const [code, setCode] = useState("")
 
     useEffect(() => {
         Axios.get(`http://localhost:8000/getuser/${db[0].user_id}`).then((response) => {
             setCurrent(response.data)
         })
+
+        Axios.get('http://localhost:8000/subjects').then((response) => {
+         setSubjects(response.data)
+         console.log(response.data)
+        })
+
+        refresh();
+
     }, [])
+
+    const refresh = () => {
+        Axios.get(`http://localhost:8000/getuser/${db[0].user_id}`).then((result) => {
+            console.log(result.data[0].subject)
+            setUsername(result.data[0].username)
+            setCode(result.data[0].code)
+            setFirstname(result.data[0].firstname)
+            setLastname(result.data[0].lastname)
+            setEmail(result.data[0].email)
+            setSubject(result.data[0].subject)
+            
+            
+        })
+    }
 
     const sendServer = () => {
 
@@ -39,8 +65,10 @@ const MFixed = () => {
         })
             .then((response) => {
                 
-                window.alert(`${response.data}, Signin for come back to this page !!!`)      
-                // history.push("/");
+                window.alert(`${response.data}`)      
+                //history.push("/");
+                //window.location.reload();
+                refresh()
 
             }).catch((error) => {
                 window.alert(error)
@@ -161,10 +189,23 @@ const MFixed = () => {
                                 setSubject(e.target.value)
                             }}
                             className=" dpib mx-5" aria-label="Default select example">
-                            <option defaultValue value={username}  >{subject}</option>
-                            <option value="COM 1404 sec 2">COM 1404 sec 2</option>
-                            <option value="COM 2540 sec 1">COM 2540 sec 1</option>
-                            <option value="COM 3303 sec 11">COM 3303 sec 11</option>
+                            <option defaultValue value={subject}  >{subject}</option>
+                            {
+                                subjects.map((result, key) => {
+                                
+                                return (
+
+                                    
+                                     subject != result.subject_code ? <option key={key}  value={result.subject_code}>{result.subject_code}</option> : <div>defualt</div>
+                                    
+                                   
+                                    
+                                )
+                                
+
+                                })
+                            }
+                            
                         </select>
 
                     </div>
@@ -185,7 +226,7 @@ const MFixed = () => {
                     <div type="button" className="direct-btn f-r"
                         onClick={() => {
                             if (window.confirm(
-                                `You need to Login again for refresh cookies                                           Are you sure you want to edit`
+                                `Are you sure you want to edit`
                             )) {
                                 sendServer()
                             }

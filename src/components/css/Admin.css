@@ -180,7 +180,7 @@
     background-color: #fff;
     border: none;
     -webkit-box-shadow: none;
-    text-transform: lowercase;
+    
     outline: none;
     padding-left: 20px;
 }
@@ -189,7 +189,7 @@
 
 .input-note:focus {
     -webkit-box-shadow: none;
-    text-transform: lowercase;
+    
     color: #14213D;
 }
 
@@ -264,7 +264,7 @@
     background-color: rgba(255, 255, 255, 0);
     border: none;
     -webkit-box-shadow: none;
-    text-transform: lowercase;
+    
     
     outline: none;
     color: white;
@@ -274,7 +274,7 @@
 .input-op:focus {
     -webkit-box-shadow: none;
     text-align: start;
-    text-transform: lowercase;
+   
     
     color: #ffffff;
 }
