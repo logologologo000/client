@@ -10,20 +10,67 @@ import Answer from "../Answer";
 const Createanswer = ({ RefreshData }) => {
   const [detail, setDetail] = useState("");
   const [title, setTitle] = useState("");
+  const [file, setFile] = useState('')
+  const [filename, setFilename] = useState('Choose File')
+  const [uploadedFile, setUploadedFile] = useState({})
 
-  const SaveAns = () => {
+
+  const onChange = (e) => {
+    setFile(e.target.files[0])
+    setFilename(e.target.files[0].name)
+    
+    }
+
+  const SaveAns = async (e) => {
+    // e.preventDefault()
     try {
-      Axios.post("http://localhost:8000/createans", {
-        detail: detail,
-        title: title,
-      }).then((result) => {
-        if (result.status != 200) {
-          alert(result.data);
-        } else {
-          alert("Success");
-        }
-      });
-    } catch (err) {}
+      
+      
+            const formData = new FormData()
+            formData.append('file', file)
+            formData.append('title', title)
+            formData.append('detail', detail)
+            console.log(file)
+            console.log(title)
+            console.log(detail)
+
+            try {
+              const res = await Axios.post('http://localhost:8000/createans', formData , {
+                  headers: {
+                      'Content-Type': 'multipart/form-data'
+                      
+                  }
+              })
+              
+              const { fileName, filePath } = res.data
+              setUploadedFile(fileName, filePath)
+              window.alert('Create Success')
+              // history.push("/");
+          } catch (err) {
+              if (err) {
+                  window.alert(err.response.data.msg)
+                  console.log(err.response.data.msg)
+              } else {
+                  console.log(err.response.data.msg)
+              }
+          }
+
+
+
+      // Axios.post("http://localhost:8000/createans", {
+      //   detail: detail,
+      //   title: title,
+      // }).then((result) => {
+      //   if (result.status != 200) {
+      //     alert(result.data);
+      //   } else {
+      //     alert("Success");
+      //   }
+      // });
+
+
+
+    } catch (err) { }
 
     setTitle("");
     setDetail("");
@@ -41,12 +88,24 @@ const Createanswer = ({ RefreshData }) => {
             <label className="d-block">title</label>
             <input
               type="text"
-              className="input-note d-block my-2"
+              className="input-note dpib block my-2"
               onChange={(e) => {
                 setTitle(e.target.value);
               }}
               value={title}
             />
+
+
+           
+            <input
+              onChange={(e) => {
+                setFile(e.target.files[0])
+              }}
+              type="file" className=" upload-btn color-white custom-file-input f-r " />
+
+
+
+
             <label className="d-block">description</label>
             <textarea
               onChange={(e) => {
@@ -64,7 +123,7 @@ const Createanswer = ({ RefreshData }) => {
                 if (
                   window.confirm(
                     `Are you sure you want to create`
-                    )
+                  )
                 ) {
                   SaveAns();
                   RefreshData();

@@ -8,8 +8,9 @@ import { FaPaste } from 'react-icons/fa';
 import ReactDOM from "react-dom";
 
 
-const Getanswer = ({setAnswerNo}) => {
+const Getanswer = ({valuex}) => {
     const [answers, setAnswers] = useState([])
+    const [status, setStatus] = useState([])
     
     
     const [fixid , setFixId] = useState("")
@@ -64,7 +65,7 @@ const Getanswer = ({setAnswerNo}) => {
     
 
     
-
+    // var valuex = []
     
     
    
@@ -86,19 +87,36 @@ const Getanswer = ({setAnswerNo}) => {
                                 {
                                  filterSearchAns.map((result, key) => {
                                             var xxx
-                                                if (result.answer_title.length > 13) {
+                                                if (result.answer_title.length > 10) {
                                                     xxx = "..."
                                                 }
                                         return (
 
                                             <div className="mt-3" key={key}>
-                                                <h6 className="dpib color-yellow lt-sp">{result.answer_title.substring(13,0)}{xxx}</h6>
+                                                <h6 className="dpib color-yellow lt-sp">{result.answer_title.substring(10,0)}{xxx}</h6>
                                                 
-                                                <div 
+                                                <div id={key} 
                                                 onClick={() => {
                                                     
-                                                    setAnswerNo(result.answer_detail)
-                                                    console.log(result.answer_detail)
+                                                    if (document.getElementById(`${key}`) != null) {
+                                                        
+                                                        var d = document.getElementById(`${key}`)
+                                                        
+                                                        if(d.style.backgroundColor == 'green'){
+                                                            d.style.backgroundColor = ''
+                                                            
+
+                                                        }else{
+                                                            d.style.backgroundColor = 'green'
+                                                            //do here
+                                                            valuex.push(result.answer_id)
+    
+
+                                                        }
+                                                        console.log(result.answer_detail)
+                                                    }
+    
+
                                                 }}
                                                 className="dpib upload-btn f-r color-white" type="button">
                                                     < FaPaste />

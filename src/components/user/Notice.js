@@ -37,7 +37,7 @@ const Notice = () => {
                     {
                         //  List
                     }
-                    <div className="col-10 col-sm-7 col-md-4 mt-4  m-auto">
+                    <div className="col-10 col-sm-10 col-md-10 mt-4  m-auto">
                         <div className="formmmm p-4 tac">
                             <div className="h5 lt-sp color-yellow tests">NOTICE</div>
 
@@ -54,7 +54,7 @@ const Notice = () => {
                                                     xxx = "..."
                                                 }
                                         return (
-                                            <div key={key}>
+                                            <div key={key} className='dpib newno m-1'>
                                                 <div className="">
                                                     <div>
                                                         <h6 className="color-yellow d-block ">{res.title.substring(20,0)}{xxx}</h6>
@@ -76,7 +76,7 @@ const Notice = () => {
 
                                                     </div>
 
-                                                    <hr />
+                                                    
 
 
                                                 </div>
@@ -97,7 +97,7 @@ const Notice = () => {
                     {
                         //  Detail
                     }
-                    <div className="col-12 col-sm-12 col-md-8  m-auto my-4" >
+                    <div className="col-10 col-sm-10 col-md-10  m-auto my-4" >
                         <div className=" p-3  formmmmrex">
 
                             <div class="py-1 detail-requ" id="idcol1">

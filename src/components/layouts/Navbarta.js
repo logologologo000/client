@@ -1,10 +1,11 @@
 import React from 'react'
 import '../css/Navbar.css'
 import {Link, Route, Switch} from 'react-router-dom'
-import Admin from '../admin/Admin.js'
-import MoreNo from '../admin/Moreno'
+import Admin from '../ta/Admin.js'
 import Answer from '../admin/Answer.js'
-import Management from '../admin/Management.js'
+// import Management from '../admin/Management.js'
+import Management from '../user/MFix'
+
 import Subject from '../admin/Subject'
 import Signin from '../Signin.js'
 import MFixAdmin from '../admin/MFix.js'
@@ -21,7 +22,7 @@ import { IoIosList } from 'react-icons/io';
 import { FaBook } from 'react-icons/fa';
 
 
-function Navbar() {
+function Navbarta() {
     let history = useHistory();
     const db = useContext(dbContext)
     console.log(db)
@@ -39,7 +40,7 @@ function Navbar() {
             <div className="container-fluid">
             
             <Link to="/" className="navmain fixed-navleft dpib">
-                        ADMIN
+                        TA
                     </Link>
 
                 
@@ -66,7 +67,7 @@ function Navbar() {
                          }
                     </a>
                     
-                    <Link to="/subject"
+                    {/* <Link to="/subject"
                         className="fixed-navright mx-4 my-0"
                     >
                          <h5 className="mt-1"> < FaBook /> </h5>
@@ -77,13 +78,14 @@ function Navbar() {
                     >
                          <h3 className="my-0"> < TiDocumentText /> </h3>
                     </Link>
-                    
+
+                    */}
 
                     <Link to="/management"
                         className="fixed-navright mx-4 my-0"
                     >
                          <h3 className="my-0"> < MdManageAccounts /> </h3>
-                    </Link>
+                    </Link> 
 
                     <a type="button" onClick={refreshPage}
                         className="fixed-navright mx-4 my-0  pt-1"
@@ -103,7 +105,6 @@ function Navbar() {
         <Switch>
             <Route exact path="/"><Admin /></Route>
             <Route path="/management"><Management /></Route>
-            <Route path="/moreno"><MoreNo /></Route>
             <Route path="/subject"><Subject /></Route>
             <Route path="/managementans"><Answer /></Route>
             <Route path="/signin"><Signin /></Route>
@@ -122,4 +123,4 @@ function Navbar() {
     )
 }
 
-export default Navbar
+export default Navbarta

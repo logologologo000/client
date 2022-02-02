@@ -3,7 +3,7 @@ import "../css/Admin.css";
 import { useState, useEffect } from "react";
 import Axios from "axios";
 import { Link, Route, Switch } from "react-router-dom";
-// import { useHistory } from "react-router-dom";
+import { useHistory } from "react-router-dom";
 import { dbContext } from "../Signin";
 import { AiFillAlert } from "react-icons/ai";
 import { HiUsers } from "react-icons/hi";
@@ -11,11 +11,8 @@ import { FaUserGraduate } from "react-icons/fa";
 import { MdAssignment } from "react-icons/md";
 import { GoEye } from "react-icons/go";
 import { HiOutlineSearchCircle } from "react-icons/hi";
-import { useHistory, useParams } from "react-router-dom";
 
 function Admin() {
-  let history = useHistory();
-
   const [requests, setRequests] = useState([]);
   const [users, setUsers] = useState([]);
   const [notices, setNotices] = useState([]);
@@ -42,13 +39,13 @@ function Admin() {
     // get reqs with status 0 and 1
     Axios.get("http://localhost:8000/getreqsstatus").then((response) => {
       setRequests(response.data);
-
+      
     });
 
     //get all users
     Axios.get("http://localhost:8000/getallusers").then((response) => {
-
-      response.data.map((result, key) => {
+      
+      response.data.map((result , key) => {
         console.log(result.level)
       })
       setUsers(response.data);
@@ -68,7 +65,7 @@ function Admin() {
   const GetNew = () => {
     // get reqs with status 0
     Axios.get("http://localhost:8000/getreqsstatus0").then((response) => {
-
+      
       setFilterSearch(response.data);
     });
   }
@@ -76,7 +73,7 @@ function Admin() {
   const GetProcess = () => {
     // get reqs with status 1
     Axios.get("http://localhost:8000/getreqsstatus1").then((response) => {
-
+      
       setFilterSearch(response.data);
     });
   }
@@ -84,13 +81,13 @@ function Admin() {
   const GetSuccess = () => {
     // get reqs with status 2
     Axios.get("http://localhost:8000/getreqsstatus2").then((response) => {
-
+      
       setFilterSearch(response.data);
     });
   }
 
   const [filterSearch, setFilterSearch] = useState([]);
-
+  
   const searchFunc = async (e) => {
     const wording = e.target.value;
     const newFilter = requests.filter((value) => {
@@ -106,7 +103,7 @@ function Admin() {
           {
             //Status
           }
-          <div className="col-lg-4 col-md-5 col-sm-8 col-8 m-auto mt-4">
+          <div className="col-lg-6 col-md-5 col-sm-8 col-8 m-auto mt-4">
             <div className="formmmm p-4">
               <h6 className="color-white mb-3 lt-sp ">STATUS</h6>
               <div className="border-content">
@@ -123,19 +120,22 @@ function Admin() {
                     </tr>
                     <tr>
                       <td className="">
-                        <p onClick={GetNew} type="button" className="dot-red my-0  dpib"></p><div className="mx-2 dpib">( new )</div>
+                      <p onClick={GetNew} type="button" className="dot-red my-0  dpib"></p><div className="mx-2 dpib">( new )</div>
+
                       </td>
                       <td className="text-end">{status0}</td>
                     </tr>
                     <tr>
                       <td>
-                        <p onClick={GetProcess} type="button" className="dot-yellow my-0  dpib"></p><div className="mx-2 dpib">( processing )</div>
+                      <p onClick={GetProcess} type="button" className="dot-yellow my-0  dpib"></p><div className="mx-2 dpib">( processing )</div>
+
                       </td>
                       <td className="text-end">{status1}</td>
                     </tr>
                     <tr>
                       <td>
-                        <p onClick={GetSuccess} type="button" className="dot-green my-0  dpib" ></p><div className="mx-2 dpib">( success )</div>
+                      <p onClick={GetSuccess} type="button" className="dot-green my-0  dpib" ></p><div className="mx-2 dpib">( success )</div>
+
                       </td>
                       <td className="text-end">{status2}</td>
                     </tr>
@@ -174,60 +174,11 @@ function Admin() {
           {
             //Create Notice
           }
-          <div className="col-lg-4 col-md-5 col-sm-8 col-8 m-auto mt-4">
-            <div className="formmmm tac p-4">
-              <div>
-                <h5 className="color-yellow lt-sp mx-3 ">CREATE NOTICE</h5>
-
-                <Link to="/createnotice" type="button" className="ic-add mt-4">
-                  +
-                </Link>v
-                <Link to="/moreno" type="button" className="ic-add mt-4">
-                  ...
-                </Link>
-              </div>
-              <div className="create-notice-border mt-3">
-                <div className="list-scroll p-2">
-                  {
-                    //loop here
-                  }
-                  {notices.map((response, key) => {
-                    var xxx;
-                    if (response.title.length > 15) {
-                      xxx = "...";
-                    }
-                    return (
-                      <div
-                        key={key}
-                        id={key}
-                        onMouseEnter={() => {
-                          console.log(response.img);
-                          // document.getElementById(key).style =
-                          // `
-                          // background-image : url(/uploads/notice/${response.img});
-                          // `
-                          // document.getElementById(key).classList = 'resize'
-                        }}
-                      >
-                        <div className="border-content-s mt-4">
-                          <Link to={`/editnotice/${response.notice_id}`}>
-                            <p className="color-white m-auto p-4">
-                              {response.title.substring(15, 0)}
-                              {xxx}
-                            </p>
-                          </Link>
-                        </div>
-                      </div>
-                    );
-                  })}
-                </div>
-              </div>
-            </div>
-          </div>
+          
           {
             //List req
           }
-          <div className="col-lg-4 col-md-8 col-sm-8 col-8 m-auto my-4 ">
+          <div className="col-lg-6 col-md-8 col-sm-8 col-8 m-auto my-4 ">
             <div className="formmmm p-4">
               <div className="text-center">
                 <h4 className="color-white d-block mx-2 ">
@@ -259,14 +210,14 @@ function Admin() {
                           <h6 className="color-yellow lt-sp dpb  d-inline-block">
                             {response.title.substring(15, 0)}
                             {xxx}
-
+                            
                           </h6>
-
-
+                          
+                          
                           {/* <p className="color-white lt-sp d-inline-block mx-2">{response.code}</p> */}
                           <div className="dpib m-0 f-r">
-                            <div
-                              
+                            <Link
+                              to={`/fixreq/${response.request_id}`}
                               type="button"
                               className=" bt-class lt-sp m-0"
                               /*
@@ -277,33 +228,29 @@ function Admin() {
                                                             }} 
                                                             */
                               onClick={() => {
-                                history.push(`/fixreq/${response.request_id}`);
+                                if(response.status != 2) {
 
-                                if (response.status != 2) {
-                                  console.log(response.request_id)
-                                  
                                   //set req status
-                                  Axios.post(
-                                    "http://localhost:8000/setstatusreq",
-                                    {
-                                      request_id: response.request_id,
-                                      status: 1,
-                                    }
-                                  );
+                                Axios.post(
+                                  "http://localhost:8000/setstatusreq",
+                                  {
+                                    request_id: response.request_id,
+                                    status: 1,
+                                  }
+                                );
+                              }}
                                 }
-                              }
-                              }
-
-                            /*
-                                                          onMouseOut={() => {
-                                                              document.getElementById(`${response.request_id}`).style.display = 'none' 
-                                                          }}
-                                                          */
+                                
+                              /*
+                                                            onMouseOut={() => {
+                                                                document.getElementById(`${response.request_id}`).style.display = 'none' 
+                                                            }}
+                                                            */
                             >
                               <p className="m-0">
                                 <GoEye />
                               </p>
-                            </div>
+                            </Link>
                           </div>
                           <br />
                           <div class="collapse" id={response.request_id}>
